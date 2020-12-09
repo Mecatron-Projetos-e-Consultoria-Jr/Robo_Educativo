@@ -21122,6 +21122,24 @@ Nick Garner - TeleSense</description>
 <pin name="+" x="0" y="7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="-" x="0" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
+<symbol name="RESISTOR">
+<description>0402 (1005 Metric)  
+
+Nick Garner - TeleSense</description>
+<wire x1="2.54" y1="0" x2="2.921" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="2.921" y1="1.016" x2="3.556" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="3.556" y1="-1.016" x2="4.191" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="4.191" y1="1.016" x2="4.826" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="4.826" y1="-1.016" x2="5.461" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="5.461" y1="1.016" x2="6.096" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="6.096" y1="-1.016" x2="6.731" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="6.731" y1="1.016" x2="7.366" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="7.366" y1="-1.016" x2="7.62" y2="0" width="0.1524" layer="94"/>
+<text x="1.27" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.27" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="10.16" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="0" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="CAP_0402" prefix="C" uservalue="yes">
@@ -21162,90 +21180,15 @@ Nick Garner - TeleSense</description>
 </device>
 </devices>
 </deviceset>
-</devicesets>
-</library>
-<library name="resistors">
-<description>&lt;b&gt;AnaLog's Custom Resistors&lt;/B&gt;&lt;p&gt;</description>
-<packages>
-<package name="R0603_RESISTORS_LIB">
-<description>&lt;b&gt;CODATRON JUMPER SMT  RESISTOR&lt;/b&gt;&lt;p&gt;
-chip</description>
-<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
-<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
-<text x="-2.667" y="1.397" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
-<text x="-2.667" y="-2.54" size="1.27" layer="27" font="vector" ratio="10">&gt;VALUE</text>
-<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
-<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
-</package>
-<package name="M0805" urn="urn:adsk.eagle:footprint:23065/1">
-<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
-MELF 0.10 W</description>
-<wire x1="-1.973" y1="0.983" x2="1.973" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="-0.983" x2="-1.973" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.973" y1="-0.983" x2="-1.973" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="0.983" x2="1.973" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="0.7112" y1="0.635" x2="-0.7112" y2="0.635" width="0.1524" layer="51"/>
-<wire x1="0.7112" y1="-0.635" x2="-0.7112" y2="-0.635" width="0.1524" layer="51"/>
-<smd name="1" x="-0.95" y="0" dx="1.3" dy="1.6" layer="1"/>
-<smd name="2" x="0.95" y="0" dx="1.3" dy="1.6" layer="1"/>
-<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.0414" y1="-0.7112" x2="-0.6858" y2="0.7112" layer="51"/>
-<rectangle x1="0.6858" y1="-0.7112" x2="1.0414" y2="0.7112" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.5999" x2="0.1999" y2="0.5999" layer="35"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="M0805" urn="urn:adsk.eagle:package:23556/2" type="model">
-<description>RESISTOR
-MELF 0.10 W</description>
-<packageinstances>
-<packageinstance name="M0805"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="R-EU-1">
-<wire x1="-2.54" y1="-0.889" x2="2.54" y2="-0.889" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0.889" x2="-2.54" y2="0.889" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-0.889" x2="2.54" y2="0.889" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-0.889" x2="-2.54" y2="0.889" width="0.254" layer="94"/>
-<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
-<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="R-EU_" prefix="R" uservalue="yes">
-<description>&lt;B&gt;RESISTOR&lt;/B&gt;, European symbol</description>
+<deviceset name="RES_0402" prefix="R" uservalue="yes">
+<description>0402 (1005 Metric)  
+
+Nick Garner - TeleSense</description>
 <gates>
-<gate name="G$1" symbol="R-EU-1" x="0" y="0"/>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="M0805" package="M0805">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:23556/2"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="45" constant="no"/>
-<attribute name="SPICEPREFIX" value="R" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="" package="R0603_RESISTORS_LIB">
+<device name="" package="0402">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -21255,12 +21198,6 @@ MELF 0.10 W</description>
 </technologies>
 </device>
 </devices>
-<spice>
-<pinmapping spiceprefix="R">
-<pinmap gate="G$1" pin="1" pinorder="1"/>
-<pinmap gate="G$1" pin="2" pinorder="2"/>
-</pinmapping>
-</spice>
 </deviceset>
 </devicesets>
 </library>
@@ -21354,17 +21291,17 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U2" library="AMS1117-3.3" deviceset="AMS1117-3.3" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="22uF"/>
+<part name="C7" library="Perfect_0402" deviceset="CAP_0402" device="" value="22uF"/>
 <part name="C6" library="Perfect_0402" deviceset="CAP_0402" device="" value="0.1uF"/>
 <part name="S2" library="smd-special" library_urn="urn:adsk.eagle:library:362" deviceset="SWS001" device="" package3d_urn="urn:adsk.eagle:package:26467/1"/>
 <part name="LS1" library="CPT-1762-90-SMT-TR" deviceset="CPT-1762-90-SMT-TR" device="XDCR_CPT-1762_ROBO" value="CPT-1762-90-SMT-TRXDCR_CPT-1762_ROBO"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0,1 uF"/>
 <part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0,1 uF"/>
 <part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10 uF"/>
-<part name="R1" library="resistors" deviceset="R-EU_" device="" value="10k"/>
+<part name="R1" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="S1" library="switch-tact" deviceset="DTSM-3" device="" value="EN"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R44" library="resistors" deviceset="R-EU_" device="" value="10k"/>
+<part name="R44" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="S3" library="switch-tact" deviceset="DTSM-3" device="" value="BOOT"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0,1 uF"/>
 <part name="CHARGER" library="MAX712" deviceset="MAX712" device=""/>
@@ -21374,20 +21311,20 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0,1 uF"/>
 <part name="C14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0,1 uF"/>
 <part name="C15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10 uF"/>
-<part name="R51" library="resistors" deviceset="R-EU_" device="" value="470R"/>
+<part name="R51" library="Perfect_0402" deviceset="RES_0402" device="" value="470R"/>
 <part name="Q1" library="SMD-TRANSISTORS-NPN-25V-500MW_SOT-23_" deviceset="SMD-TRANSISTORS-NPN-25V-500MW(SOT-23)" device=""/>
 <part name="Q2" library="SMD-TRANSISTORS-NPN-25V-500MW_SOT-23_" deviceset="SMD-TRANSISTORS-NPN-25V-500MW(SOT-23)" device=""/>
-<part name="R52" library="resistors" deviceset="R-EU_" device="" value="10k"/>
-<part name="R53" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="R52" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
+<part name="R53" library="Perfect_0402" deviceset="RES_0402" device="" value="10k"/>
 <part name="Q3" library="semicon-smd-ipc" library_urn="urn:adsk.eagle:library:353" deviceset="PNP-TRANSISTOR_" device="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2"/>
-<part name="R54" library="resistors" deviceset="R-EU_" device="" value="150R"/>
+<part name="R54" library="Perfect_0402" deviceset="RES_0402" device="" value="150R"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0,01 uF"/>
-<part name="R55" library="resistors" deviceset="R-EU_" device="" value="680R"/>
+<part name="R55" library="Perfect_0402" deviceset="RES_0402" device="" value="680R"/>
 <part name="C11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1 uF"/>
-<part name="R56" library="resistors" deviceset="R-EU_" device="" value="68k"/>
-<part name="R57" library="resistors" deviceset="R-EU_" device="" value="22k"/>
+<part name="R56" library="Perfect_0402" deviceset="RES_0402" device="" value="68k"/>
+<part name="R57" library="Perfect_0402" deviceset="RES_0402" device="" value="22k"/>
 <part name="C16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.01 uF"/>
-<part name="R58" library="resistors" deviceset="R-EU_" device="" value="1R"/>
+<part name="R58" library="Perfect_0402" deviceset="RES_0402" device="" value="1R"/>
 <part name="J3" library="ZX62-B-5PA" deviceset="ZX62-B-5PA" device=""/>
 <part name="J2" library="S2B-PH-K-S_LF__SN_" deviceset="S2B-PH-K-S(LF)(SN)" device=""/>
 <part name="JP8" library="con-headers-jp(1)" library_urn="urn:adsk.eagle:library:24160814" deviceset="F-1X08-" device="SIP-100-40" package3d_urn="urn:adsk.eagle:package:24161226/2"/>
@@ -21502,9 +21439,9 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <instance part="GND7" gate="1" x="187.96" y="43.18" smashed="yes">
 <attribute name="VALUE" x="185.42" y="40.64" size="1.778" layer="96"/>
 </instance>
-<instance part="C7" gate="G$1" x="195.58" y="53.34" smashed="yes">
-<attribute name="NAME" x="197.104" y="53.721" size="1.778" layer="95"/>
-<attribute name="VALUE" x="197.104" y="48.641" size="1.778" layer="96"/>
+<instance part="C7" gate="G$1" x="195.58" y="48.26" smashed="yes">
+<attribute name="NAME" x="197.104" y="48.641" size="1.778" layer="95"/>
+<attribute name="VALUE" x="197.104" y="43.561" size="1.778" layer="96"/>
 </instance>
 <instance part="C6" gate="G$1" x="152.4" y="45.72" smashed="yes">
 <attribute name="NAME" x="153.924" y="46.101" size="1.778" layer="95"/>
@@ -21530,9 +21467,9 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <attribute name="NAME" x="44.069" y="190.754" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="49.149" y="190.754" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R1" gate="G$1" x="20.32" y="184.15" smashed="yes" rot="R90">
-<attribute name="NAME" x="18.8214" y="180.34" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="23.622" y="180.34" size="1.778" layer="96" rot="R90"/>
+<instance part="R1" gate="G$1" x="20.32" y="179.07" smashed="yes" rot="R90">
+<attribute name="NAME" x="18.8214" y="175.26" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="23.622" y="175.26" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="S1" gate="G$1" x="15.24" y="156.21" smashed="yes" rot="R270">
 <attribute name="NAME" x="13.335" y="162.56" size="1.778" layer="95"/>
@@ -21541,9 +21478,9 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <instance part="GND1" gate="1" x="55.88" y="185.42" smashed="yes" rot="R90">
 <attribute name="VALUE" x="58.42" y="182.88" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R44" gate="G$1" x="124.46" y="172.72" smashed="yes" rot="R270">
-<attribute name="NAME" x="125.9586" y="176.53" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="121.158" y="176.53" size="1.778" layer="96" rot="R270"/>
+<instance part="R44" gate="G$1" x="124.46" y="177.8" smashed="yes" rot="R270">
+<attribute name="NAME" x="125.9586" y="181.61" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="121.158" y="181.61" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="S3" gate="G$1" x="137.16" y="167.64" smashed="yes" rot="R270">
 <attribute name="NAME" x="135.255" y="173.99" size="1.778" layer="95"/>
@@ -21580,9 +21517,9 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <attribute name="NAME" x="-101.854" y="-5.461" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-101.854" y="-0.381" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R51" gate="G$1" x="-68.58" y="72.39" smashed="yes">
-<attribute name="NAME" x="-72.39" y="73.8886" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-72.39" y="69.088" size="1.778" layer="96"/>
+<instance part="R51" gate="G$1" x="-73.66" y="72.39" smashed="yes">
+<attribute name="NAME" x="-77.47" y="73.8886" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-77.47" y="69.088" size="1.778" layer="96"/>
 </instance>
 <instance part="Q1" gate="G$1" x="-171.45" y="44.45" smashed="yes">
 <attribute name="NAME" x="-173.99435" y="46.99435" size="1.27216875" layer="95" ratio="10"/>
@@ -21596,45 +21533,45 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <attribute name="NAME" x="-189.23" y="45.9486" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-189.23" y="41.148" size="1.778" layer="96"/>
 </instance>
-<instance part="R53" gate="G$1" x="-185.42" y="29.21" smashed="yes">
-<attribute name="NAME" x="-189.23" y="30.7086" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-189.23" y="25.908" size="1.778" layer="96"/>
+<instance part="R53" gate="G$1" x="-190.5" y="29.21" smashed="yes">
+<attribute name="NAME" x="-194.31" y="30.7086" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-194.31" y="25.908" size="1.778" layer="96"/>
 </instance>
 <instance part="Q3" gate="G$1" x="-154.94" y="170.18" smashed="yes">
 <attribute name="NAME" x="-152.4" y="170.18" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-165.1" y="175.26" size="1.778" layer="96"/>
 </instance>
-<instance part="R54" gate="G$1" x="-157.48" y="176.53" smashed="yes">
-<attribute name="NAME" x="-161.29" y="178.0286" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-161.29" y="173.228" size="1.778" layer="96"/>
+<instance part="R54" gate="G$1" x="-162.56" y="176.53" smashed="yes">
+<attribute name="NAME" x="-166.37" y="178.0286" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-166.37" y="173.228" size="1.778" layer="96"/>
 </instance>
 <instance part="C2" gate="G$1" x="-157.48" y="184.15" smashed="yes" rot="R270">
 <attribute name="NAME" x="-154.559" y="187.706" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-164.846" y="185.801" size="1.778" layer="96"/>
 </instance>
-<instance part="R55" gate="G$1" x="-157.48" y="191.77" smashed="yes">
-<attribute name="NAME" x="-161.29" y="193.2686" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-161.29" y="188.468" size="1.778" layer="96"/>
+<instance part="R55" gate="G$1" x="-162.56" y="191.77" smashed="yes">
+<attribute name="NAME" x="-166.37" y="193.2686" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-166.37" y="188.468" size="1.778" layer="96"/>
 </instance>
 <instance part="C11" gate="G$1" x="-175.26" y="191.77" smashed="yes" rot="R270">
 <attribute name="NAME" x="-172.339" y="195.326" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-182.626" y="193.421" size="1.778" layer="96"/>
 </instance>
-<instance part="R56" gate="G$1" x="-180.34" y="179.07" smashed="yes">
-<attribute name="NAME" x="-184.15" y="180.5686" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-184.15" y="175.768" size="1.778" layer="96"/>
+<instance part="R56" gate="G$1" x="-185.42" y="179.07" smashed="yes">
+<attribute name="NAME" x="-189.23" y="180.5686" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-189.23" y="175.768" size="1.778" layer="96"/>
 </instance>
-<instance part="R57" gate="G$1" x="-190.5" y="186.69" smashed="yes">
-<attribute name="NAME" x="-194.31" y="188.1886" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-194.31" y="183.388" size="1.778" layer="96"/>
+<instance part="R57" gate="G$1" x="-195.58" y="186.69" smashed="yes">
+<attribute name="NAME" x="-199.39" y="188.1886" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-199.39" y="183.388" size="1.778" layer="96"/>
 </instance>
 <instance part="C16" gate="G$1" x="-182.88" y="161.29" smashed="yes" rot="R270">
 <attribute name="NAME" x="-179.959" y="164.846" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-182.626" y="157.861" size="1.778" layer="96"/>
 </instance>
-<instance part="R58" gate="G$1" x="-228.6" y="189.23" smashed="yes">
-<attribute name="NAME" x="-232.41" y="190.7286" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-232.41" y="185.928" size="1.778" layer="96"/>
+<instance part="R58" gate="G$1" x="-233.68" y="187.96" smashed="yes">
+<attribute name="NAME" x="-237.49" y="189.4586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-237.49" y="184.658" size="1.778" layer="96"/>
 </instance>
 <instance part="J3" gate="G$1" x="-40.64" y="-2.54" smashed="yes">
 <attribute name="NAME" x="-50.8107" y="10.9362" size="1.77986875" layer="95"/>
@@ -21644,11 +21581,11 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <attribute name="VALUE" x="45.72" y="63.5" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="JP8" gate="G$1" x="547.37" y="234.95" smashed="yes">
-<attribute name="NAME" x="541.02" y="248.285" size="1.778" layer="95"/>
+<attribute name="NAME" x="542.29" y="245.745" size="1.778" layer="95"/>
 <attribute name="VALUE" x="529.59" y="220.98" size="1.778" layer="96"/>
 </instance>
 <instance part="JP10" gate="G$1" x="557.53" y="229.87" smashed="yes" rot="R180">
-<attribute name="NAME" x="561.34" y="247.015" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="563.88" y="247.015" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="574.04" y="248.92" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND4" gate="1" x="532.13" y="220.98" smashed="yes">
@@ -21866,7 +21803,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <attribute name="VALUE" x="419.862" y="3.81" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="JP2" gate="G$1" x="557.53" y="180.34" smashed="yes" rot="R180">
-<attribute name="NAME" x="563.88" y="173.355" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="565.15" y="173.355" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="572.77" y="170.18" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="S4" gate="1" x="538.48" y="36.83" smashed="yes" rot="R270">
@@ -21898,7 +21835,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 </instance>
 <instance part="J1" gate="G$1" x="547.37" y="201.93" smashed="yes">
 <attribute name="VALUE" x="530.86" y="187.96" size="1.778" layer="96"/>
-<attribute name="NAME" x="544.83" y="210.312" size="1.778" layer="95"/>
+<attribute name="NAME" x="542.29" y="210.312" size="1.778" layer="95"/>
 </instance>
 <instance part="JP1" gate="G$1" x="513.08" y="-17.78" smashed="yes">
 <attribute name="NAME" x="506.73" y="-12.065" size="1.778" layer="95"/>
@@ -21910,7 +21847,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 </instance>
 <instance part="JP11" gate="G$1" x="557.53" y="201.93" smashed="yes" rot="R180">
 <attribute name="VALUE" x="558.8" y="217.17" size="1.778" layer="96" rot="R180"/>
-<attribute name="NAME" x="558.8" y="191.008" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="562.61" y="192.278" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="C17" gate="G$1" x="-152.4" y="142.24" smashed="yes">
 <attribute name="NAME" x="-151.384" y="147.955" size="1.778" layer="95"/>
@@ -22029,7 +21966,6 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 </segment>
 <segment>
 <pinref part="R58" gate="G$1" pin="1"/>
-<wire x1="-233.68" y1="189.23" x2="-233.68" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="-233.68" y1="187.96" x2="-236.22" y2="187.96" width="0.1524" layer="91"/>
 <label x="-236.22" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -22657,8 +22593,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <wire x1="133.35" y1="158.75" x2="132.08" y2="158.75" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="158.75" x2="132.08" y2="167.64" width="0.1524" layer="91"/>
 <junction x="132.08" y="167.64"/>
-<wire x1="124.46" y1="167.64" x2="124.46" y2="162.56" width="0.1524" layer="91"/>
-<label x="124.46" y="162.56" size="1.778" layer="95" rot="R270" xref="yes"/>
+<label x="124.46" y="167.64" size="1.778" layer="95" rot="R270" xref="yes"/>
 <pinref part="U1" gate="G$1" pin="IO0"/>
 </segment>
 <segment>
@@ -22776,7 +22711,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 </segment>
 <segment>
 <pinref part="R52" gate="G$1" pin="1"/>
-<wire x1="-190.5" y1="44.45" x2="-191.77" y2="44.45" width="0.1524" layer="91"/>
+<wire x1="-185.42" y1="44.45" x2="-191.77" y2="44.45" width="0.1524" layer="91"/>
 <label x="-196.85" y="44.45" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="Q2" gate="G$1" pin="C"/>
 <wire x1="-191.77" y1="44.45" x2="-196.85" y2="44.45" width="0.1524" layer="91"/>
@@ -22789,7 +22724,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <segment>
 <pinref part="Q1" gate="G$1" pin="B"/>
 <pinref part="R52" gate="G$1" pin="2"/>
-<wire x1="-180.34" y1="44.45" x2="-173.99" y2="44.45" width="0.1524" layer="91"/>
+<wire x1="-175.26" y1="44.45" x2="-173.99" y2="44.45" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -22832,7 +22767,6 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <segment>
 <wire x1="-218.44" y1="187.96" x2="-223.52" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="R58" gate="G$1" pin="2"/>
-<wire x1="-223.52" y1="189.23" x2="-223.52" y2="187.96" width="0.1524" layer="91"/>
 <label x="-218.44" y="187.96" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
