@@ -1,69 +1,201 @@
+/*  Programa para ESP32 antes da atualização OTA */
 #include <WiFi.h>
+#include <WiFiClient.h>
+#include <WebServer.h>
 #include <ESPmDNS.h>
-#include <WiFiUdp.h>
-#include <ArduinoOTA.h>
-
-const char* ssid = "..........";//Nome da rede
-const char* password = "..........";//Senha da rede
-
-void setup() {
-  pinMode(2, OUTPUT);
-  Serial.begin(115200);
-  Serial.println("Booting");
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
-  while (WiFi.waitForConnectResult() != WL_CONNECTED) {
-    Serial.println("Connection Failed! Rebooting...");
-    delay(5000);
-    ESP.restart();
-  }
-
-  // Port defaults to 3232
-  // ArduinoOTA.setPort(3232);
-
-  // Hostname defaults to esp3232-[MAC]
-  // ArduinoOTA.setHostname("myesp32");
-
-  // No authentication by default
-  // ArduinoOTA.setPassword("admin");
-
-  // Password can be set with it's md5 value as well
-  // MD5(admin) = 21232f297a57a5a743894a0e4a801fc3
-  // ArduinoOTA.setPasswordHash("21232f297a57a5a743894a0e4a801fc3");
-
-  ArduinoOTA
-    .onStart([]() {
-      String type;
-      if (ArduinoOTA.getCommand() == U_FLASH)
-        type = "sketch";
-      else // U_SPIFFS
-        type = "filesystem";
-
-      // NOTE: if updating SPIFFS this would be the place to unmount SPIFFS using SPIFFS.end()
-      Serial.println("Start updating " + type);
-    })
-    .onEnd([]() {
-      Serial.println("\nEnd");
-    })
-    .onProgress([](unsigned int progress, unsigned int total) {
-      Serial.printf("Progress: %u%%\r", (progress / (total / 100)));
-    })
-    .onError([](ota_error_t error) {
-      Serial.printf("Error[%u]: ", error);
-      if (error == OTA_AUTH_ERROR) Serial.println("Auth Failed");
-      else if (error == OTA_BEGIN_ERROR) Serial.println("Begin Failed");
-      else if (error == OTA_CONNECT_ERROR) Serial.println("Connect Failed");
-      else if (error == OTA_RECEIVE_ERROR) Serial.println("Receive Failed");
-      else if (error == OTA_END_ERROR) Serial.println("End Failed");
+#include <Update.h>
+ 
+/* Constantes - conexão wi-fi e webserver */
+const char* host = "esp32";
+const char* ssid = "Poker_Player"; /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
+const char* password = "MA3TI1039"; /* coloque aqui a senha da rede wi-fi que o ESP32 deve se conectar */
+ 
+/* Variáveis globais */
+int contador_ms = 0;
+ 
+/* Webserver para se comunicar via browser com ESP32  */
+WebServer server(80);
+ 
+/* Códigos da página que será aberta no browser 
+   (quando comunicar via browser com o ESP32) 
+   Esta página exigirá um login e senha, de modo que somente 
+   quem tenha estas informações consiga atualizar o firmware
+   do ESP32 de forma OTA */
+const char* loginIndex = 
+ "<form name='loginForm'>"
+    "<table width='20%' bgcolor='A09F9F' align='center'>"
+        "<tr>"
+            "<td colspan=2>"
+                "<center><font size=4><b>ESP32 - identifique-se</b></font></center>"
+                "<br>"
+            "</td>"
+            "<br>"
+            "<br>"
+        "</tr>"
+        "<td>Login:</td>"
+        "<td><input type='text' size=25 name='userid'><br></td>"
+        "</tr>"
+        "<br>"
+        "<br>"
+        "<tr>"
+            "<td>Senha:</td>"
+            "<td><input type='Password' size=25 name='pwd'><br></td>"
+            "<br>"
+            "<br>"
+        "</tr>"
+        "<tr>"
+            "<td><input type='submit' onclick='check(this.form)' value='Identificar'></td>"
+        "</tr>"
+    "</table>"
+"</form>"
+"<script>"
+    "function check(form)"
+    "{"
+    "if(form.userid.value=='admin' && form.pwd.value=='admin')"
+    "{"
+    "window.open('/serverIndex')"
+    "}"
+    "else"
+    "{"
+    " alert('Login ou senha inválidos')"
+    "}"
+    "}"
+"</script>";
+  
+const char* serverIndex = 
+"<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>"
+"<form method='POST' action='#' enctype='multipart/form-data' id='upload_form'>"
+   "<input type='file' name='update'>"
+        "<input type='submit' value='Update'>"
+    "</form>"
+ "<div id='prg'>Progresso: 0%</div>"
+ "<script>"
+  "$('form').submit(function(e){"
+  "e.preventDefault();"
+  "var form = $('#upload_form')[0];"
+  "var data = new FormData(form);"
+  " $.ajax({"
+  "url: '/update',"
+  "type: 'POST',"
+  "data: data,"
+  "contentType: false,"
+  "processData:false,"
+  "xhr: function() {"
+  "var xhr = new window.XMLHttpRequest();"
+  "xhr.upload.addEventListener('progress', function(evt) {"
+  "if (evt.lengthComputable) {"
+  "var per = evt.loaded / evt.total;"
+  "$('#prg').html('Progresso: ' + Math.round(per*100) + '%');"
+  "}"
+  "}, false);"
+  "return xhr;"
+  "},"
+  "success:function(d, s) {"
+  "console.log('Sucesso!')"
+ "},"
+ "error: function (a, b, c) {"
+ "}"
+ "});"
+ "});"
+ "</script>";
+ 
+void setup(void) 
+{
+    Serial.begin(115200);
+ 
+    /* Conecta-se a rede wi-fi */
+    WiFi.begin(ssid, password);
+    Serial.println("");
+ 
+    while (WiFi.status() != WL_CONNECTED) 
+    {
+        delay(500);
+        Serial.print(".");
+    }
+     
+    Serial.println("");
+    Serial.print("Conectado a rede wi-fi ");
+    Serial.println(ssid);
+    Serial.print("IP obtido: ");
+    Serial.println(WiFi.localIP());
+ 
+    /* Usa MDNS para resolver o DNS */
+    if (!MDNS.begin(host)) 
+    { 
+        //http://esp32.local
+        Serial.println("Erro ao configurar mDNS. O ESP32 vai reiniciar em 1s...");
+        delay(1000);
+        ESP.restart();        
+    }
+   
+    Serial.println("mDNS configurado e inicializado;");
+   
+    /* Configfura as páginas de login e upload de firmware OTA */
+    server.on("/", HTTP_GET, []() 
+    {
+        server.sendHeader("Connection", "close");
+        server.send(200, "text/html", loginIndex);
     });
-
-  ArduinoOTA.begin();
-
-  Serial.println("Ready");
-  Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());
+     
+    server.on("/serverIndex", HTTP_GET, []() 
+    {
+        server.sendHeader("Connection", "close");
+        server.send(200, "text/html", serverIndex);
+    });
+   
+    /* Define tratamentos do update de firmware OTA */
+    server.on("/update", HTTP_POST, []() 
+    {
+        server.sendHeader("Connection", "close");
+        server.send(200, "text/plain", (Update.hasError()) ? "FAIL" : "OK");
+        ESP.restart();
+    }, []() {
+        HTTPUpload& upload = server.upload();
+         
+        if (upload.status == UPLOAD_FILE_START) 
+        {
+            /* Inicio do upload de firmware OTA */
+            Serial.printf("Update: %s\n", upload.filename.c_str());
+            if (!Update.begin(UPDATE_SIZE_UNKNOWN)) 
+                Update.printError(Serial);
+        } 
+        else if (upload.status == UPLOAD_FILE_WRITE) 
+        {
+            /* Escrevendo firmware enviado na flash do ESP32 */
+            if (Update.write(upload.buf, upload.currentSize) != upload.currentSize) 
+                Update.printError(Serial);      
+        } 
+        else if (upload.status == UPLOAD_FILE_END) 
+        {
+            /* Final de upload */
+            if (Update.end(true))             
+                Serial.printf("Sucesso no update de firmware: %u\nReiniciando ESP32...\n", upload.totalSize);
+            else
+                Update.printError(Serial);
+        }   
+    });
+    server.begin();
+//Código-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  pinMode(2,OUTPUT);
 }
+ 
+void loop() 
+{
+    server.handleClient();
+    delay(1);
+ 
+    contador_ms++;
+ 
+    if (contador_ms >= 1000)
+    {    
+        Serial.println("Programa antes da atualizacao OTA");
+        contador_ms = 0;
+        Serial.print("IP obtido: ");
+        Serial.println(WiFi.localIP());
+    }
+    digitalWrite(2, 1);
+    delay(5000);
 
-void loop() {
-  ArduinoOTA.handle();
+    digitalWrite(2, 0);
+    delay(500);
 }
