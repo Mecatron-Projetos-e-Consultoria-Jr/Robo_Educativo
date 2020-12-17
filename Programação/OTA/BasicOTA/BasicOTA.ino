@@ -6,7 +6,7 @@
 #include <Update.h>
  
 /* Constantes - conexão wi-fi e webserver */
-const char* host = "esp32";
+const char* host = "32";
 const char* ssid = "Poker_Player"; /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
 const char* password = "MA3TI1039"; /* coloque aqui a senha da rede wi-fi que o ESP32 deve se conectar */
  
@@ -176,7 +176,7 @@ void setup(void)
     });
     server.begin();
 //Código-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-  pinMode(2,OUTPUT);
+  //pinMode(2,OUTPUT);
 }
  
 void loop() 
@@ -193,9 +193,4 @@ void loop()
         Serial.print("IP obtido: ");
         Serial.println(WiFi.localIP());
     }
-    digitalWrite(2, 1);
-    delay(5000);
-
-    digitalWrite(2, 0);
-    delay(500);
 }
