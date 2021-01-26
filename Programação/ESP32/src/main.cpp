@@ -356,7 +356,7 @@ void atualiza_waveform()
 {
   wf_pino.getValue(&pin_waveform);
   wf_bt_dig_ana.getValue(&val_bt_dig_ana);
-  Waveform wf(pin_waveform, val_waveform, val_waveform);
+  Waveform wf(pin_waveform, val_bt_dig_ana, val_waveform);
 
   waveform.addValue(0, wf.atualizar());
 }
