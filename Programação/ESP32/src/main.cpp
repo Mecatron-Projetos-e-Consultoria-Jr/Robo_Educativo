@@ -347,6 +347,7 @@ void pm_executarPushCallBack(void *ptr)
 
   =============================================================================================================*/
 //Configurações Waveform
+#include "Waveform.h"
 uint32_t pin_waveform;
 byte val_waveform;
 uint32_t val_bt_dig_ana;
@@ -355,71 +356,9 @@ void atualiza_waveform()
 {
   wf_pino.getValue(&pin_waveform);
   wf_bt_dig_ana.getValue(&val_bt_dig_ana);
+  Waveform wf(pin_waveform, val_waveform, val_waveform);
 
-  //Se a porta selecionada for digital
-  if (val_bt_dig_ana == 1)
-  {
-    //val_waveform = digitalRead(5) * 10;
-    switch (pin_waveform)
-    {
-    case 1:
-      val_waveform = digitalRead(1) * 10;
-      break;
-    case 2:
-      val_waveform = digitalRead(2) * 10;
-      break;
-    case 3:
-      val_waveform = digitalRead(5) * 10;
-      break;
-    case 4:
-      val_waveform = digitalRead(18) * 10;
-      break;
-    case 5:
-      val_waveform = digitalRead(5) * 10;
-      break;
-    case 6:
-      val_waveform = digitalRead(6) * 10;
-      break;
-    case 7:
-      val_waveform = digitalRead(7) * 10;
-      break;
-    case 8:
-      val_waveform = digitalRead(8) * 10;
-      break;
-    }
-  }
-  if (val_bt_dig_ana == 0)
-  {
-    //val_waveform = map(analogRead(33), 0, 4095, 0, 15);
-    switch (pin_waveform)
-    {
-    case 1:
-      val_waveform = map(analogRead(1), 0, 4095, 0, 15);
-      break;
-    case 2:
-      val_waveform = map(analogRead(2), 0, 4095, 0, 15);
-      break;
-    case 3:
-      val_waveform = map(analogRead(33), 0, 4095, 0, 15);
-      break;
-    case 4:
-      val_waveform = map(analogRead(4), 0, 4095, 0, 15);
-      break;
-    case 5:
-      val_waveform = map(analogRead(5), 0, 4095, 0, 15);
-      break;
-    case 6:
-      val_waveform = map(analogRead(6), 0, 4095, 0, 15);
-      break;
-    case 7:
-      val_waveform = map(analogRead(7), 0, 4095, 0, 15);
-      break;
-    case 8:
-      val_waveform = map(analogRead(33), 0, 4095, 0, 15);
-      break;
-    }
-  }
-  waveform.addValue(0, val_waveform);
+  waveform.addValue(0, wf.atualizar());
 }
 /*===========================================================================================================
 
