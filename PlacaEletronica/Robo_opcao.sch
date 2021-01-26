@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -21201,14 +21201,8 @@ Nick Garner - TeleSense</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="tsop-1">
-<description>IR Receiver and Demodulator
-
-TSOP IR Receiver and Demodulator modules series TSOP17XX TSOP18XX TSOP48XX
-Uploaded by Michel Verhulst (bliksem999 at hotmail dot com)
-
-v1.1
-added TSOP5X, TSOP62X (SMD-Package)</description>
+<library name="tsop">
+<description>IR Receiver and Demodulator</description>
 <packages>
 <package name="TSOP18XX">
 <wire x1="-2.5012" y1="-2.0266" x2="-3.0012" y2="-0.0266" width="0.127" layer="21"/>
@@ -21223,33 +21217,32 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <pad name="GND" x="-0.0012" y="-0.0266" drill="0.8128" shape="long" rot="R90"/>
 <pad name="VCC" x="2.4988" y="-0.0266" drill="0.8128" shape="long" rot="R90"/>
 <pad name="OUT" x="-2.5012" y="-0.0266" drill="0.8128" shape="long" rot="R90"/>
+<text x="-5.08" y="-6.35" size="1.778" layer="21">&gt;VALUE</text>
+<text x="-1.27" y="2.54" size="1.778" layer="25">Q5</text>
 </package>
 </packages>
 <symbols>
 <symbol name="TSOP">
 <wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94" curve="-180"/>
-<wire x1="-13.97" y1="-1.27" x2="-11.43" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-13.97" y1="-1.27" x2="-13.335" y2="-0.635" width="0.254" layer="94"/>
-<wire x1="-13.335" y1="-0.635" x2="-12.7" y2="0" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="0" x2="-11.43" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-11.43" y1="2.54" x2="-12.7" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="5.08" x2="-13.335" y2="4.445" width="0.254" layer="94"/>
-<wire x1="-13.335" y1="4.445" x2="-13.97" y2="3.81" width="0.254" layer="94"/>
-<wire x1="-13.97" y1="3.81" x2="-11.43" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="0" x2="-12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="0" x2="-17.78" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="0" x2="-12.7" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="2.54" x2="-12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="10.16" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-12.7" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
 <wire x1="2.54" y1="7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="-7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-13.335" y1="4.445" x2="-15.24" y2="6.35" width="0.254" layer="94"/>
-<wire x1="-13.335" y1="-0.635" x2="-15.24" y2="1.27" width="0.254" layer="94"/>
-<text x="-5.842" y="8.382" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="7.62" y="-5.08" visible="pin" length="middle" rot="R180"/>
 <pin name="OUT" x="7.62" y="0" visible="pin" length="middle" rot="R180"/>
 <pin name="V+" x="7.62" y="5.08" visible="pin" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TSOP4838">
+<deviceset name="TSOP4838" prefix="TSOP4838">
 <description>IR Receiver and Demodulator</description>
 <gates>
 <gate name="G$1" symbol="TSOP" x="2.54" y="0"/>
@@ -21388,7 +21381,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <part name="JP11" library="con-headers-jp(1)" library_urn="urn:adsk.eagle:library:24160814" deviceset="F-1X08-" device="SIP-100-40" package3d_urn="urn:adsk.eagle:package:24161226/2"/>
 <part name="C17" library="Perfect_0402" deviceset="CPOL_0402" device="" value="10uF"/>
 <part name="C18" library="Perfect_0402" deviceset="CPOL_0402" device="" value="20uF"/>
-<part name="U$2" library="tsop-1" deviceset="TSOP4838" device=""/>
+<part name="Q5" library="tsop" deviceset="TSOP4838" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21857,7 +21850,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <attribute name="NAME" x="-159.385" y="203.454" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-164.211" y="203.454" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="U$2" gate="G$1" x="541.02" y="87.63" smashed="yes" rot="R270">
+<instance part="Q5" gate="G$1" x="541.02" y="87.63" smashed="yes" rot="R270">
 <attribute name="VALUE" x="549.402" y="93.472" size="1.778" layer="96" rot="R270"/>
 </instance>
 </instances>
@@ -22013,7 +22006,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <wire x1="535.94" y1="80.01" x2="535.94" y2="74.93" width="0.1524" layer="91"/>
 <wire x1="535.94" y1="74.93" x2="532.13" y2="74.93" width="0.1524" layer="91"/>
 <label x="532.13" y="74.93" size="1.778" layer="95" rot="R180"/>
-<pinref part="U$2" gate="G$1" pin="GND"/>
+<pinref part="Q5" gate="G$1" pin="GND"/>
 <junction x="535.94" y="80.01"/>
 </segment>
 <segment>
@@ -22491,7 +22484,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <wire x1="546.1" y1="80.01" x2="546.1" y2="74.93" width="0.1524" layer="91"/>
 <wire x1="546.1" y1="74.93" x2="549.91" y2="74.93" width="0.1524" layer="91"/>
 <label x="549.91" y="73.66" size="1.778" layer="95"/>
-<pinref part="U$2" gate="G$1" pin="V+"/>
+<pinref part="Q5" gate="G$1" pin="V+"/>
 <junction x="546.1" y="80.01"/>
 </segment>
 <segment>
@@ -23312,7 +23305,7 @@ added TSOP5X, TSOP62X (SMD-Package)</description>
 <segment>
 <wire x1="541.02" y1="81.28" x2="541.02" y2="80.01" width="0.1524" layer="91"/>
 <label x="541.02" y="71.12" size="1.778" layer="95" rot="R180"/>
-<pinref part="U$2" gate="G$1" pin="OUT"/>
+<pinref part="Q5" gate="G$1" pin="OUT"/>
 <wire x1="541.02" y1="80.01" x2="541.02" y2="74.93" width="0.1524" layer="91"/>
 <junction x="541.02" y="80.01"/>
 </segment>

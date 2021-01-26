@@ -12,7 +12,7 @@
 
 /* Constantes - conexão wi-fi e webserver */
 const char *host = "esp32";
-const char *ssid = "NET_C10D75";  /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
+const char *ssid = "NET_C10D75";        /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
 const char *password = "RKtg/-O571eo,"; /* coloque aqui a senha da rede wi-fi que o ESP32 deve se conectar */
 
 /* Variáveis globais */
@@ -428,6 +428,7 @@ void atualiza_waveform()
   =============================================================================================================*/
 void setup()
 {
+  pinMode(5, INPUT_PULLUP); //Teste com a waveform
   /*===========================================================================================================
 
     Setup Upload OTA
@@ -526,8 +527,6 @@ void setup()
   wf_page_prog_man.attachPush(wf_page_prog_manPushCallback);
   wf_page_p_programas.attachPush(wf_page_p_programasPushCallback);
   wf_page_voltar.attachPush(wf_page_voltarPushCallback);
-
-  pinMode(2, OUTPUT);
 }
 /*===========================================================================================================
 
@@ -539,13 +538,13 @@ void loop()
   //Atualiza o cliente para a atualização OTA
   server.handleClient();
   delay(1);
-  contador_ms++;
-  if (contador_ms >= 1000)
-  {
-    contador_ms = 0;
-    Serial.print("IP obtido: ");
-    Serial.println(WiFi.localIP());
-  }
+  // contador_ms++;
+  // if (contador_ms >= 5000)
+  // {
+  //   contador_ms = 0;
+  //   Serial.print("IP obtido: ");
+  //   Serial.println(WiFi.localIP());
+  // }
 
   //Esta função trabalha como um listener para os eventos de press e release dos objetos utilizados no NEXTION
   nexLoop(nex_listen_list);
@@ -556,9 +555,4 @@ void loop()
     atualiza_waveform();
     delay(20);
   }
-
-  digitalWrite(2, LOW);
-  delay(1000);
-  digitalWrite(2, HIGH);
-  delay(1000);
 }

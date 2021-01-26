@@ -87,8 +87,9 @@
 <pad name="GND" x="-0.0012" y="-0.0266" drill="0.8128" shape="long" rot="R90"/>
 <pad name="VCC" x="2.4988" y="-0.0266" drill="0.8128" shape="long" rot="R90"/>
 <pad name="OUT" x="-2.5012" y="-0.0266" drill="0.8128" shape="long" rot="R90"/>
+<text x="-5.08" y="0" size="1.778" layer="21">&gt;NAME
+</text>
 <text x="-5.08" y="-6.35" size="1.778" layer="21">&gt;VALUE</text>
-<text x="-1.27" y="2.54" size="1.778" layer="25">Q5</text>
 </package>
 </packages>
 <symbols>
@@ -400,7 +401,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="TSOP4838" prefix="TSOP4838">
+<deviceset name="TSOP4838">
 <description>IR Receiver and Demodulator</description>
 <gates>
 <gate name="G$1" symbol="TSOP" x="2.54" y="0"/>
@@ -475,4 +476,10 @@
 </devicesets>
 </library>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
