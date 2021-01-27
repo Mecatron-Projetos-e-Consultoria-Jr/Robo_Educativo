@@ -150,6 +150,7 @@ NexPage page0 = NexPage(0, 0, "p_menu");
 //Nextion Text painel de settings
 NexText view_ip = NexText(2, 3, "t1");
 NexText view_ssid = NexText(2, 4, "t2");
+NexButton settings_button = NexButton(2, 12, "b2");
 
 //Nesse array, declaramos os objetos Nextion que terão interação de eventos touch
 NexTouch *nex_listen_list[] =
@@ -166,6 +167,7 @@ NexTouch *nex_listen_list[] =
         &view_btn_ant,
         &view_btn_prox,
         &view_apagar,
+        &settings_button,
         NULL};
 /*===========================================================================================================
 
@@ -195,6 +197,13 @@ void wf_page_voltarPushCallback(void *ptr)
   isPage0 = false;
 }
 
+//Atualiza as informações do wifi
+void settings_buttonPushCallback(void *ptr)
+{
+  view_ip.setText(WiFi.localIP().toString().c_str());
+  view_ssid.setText(ssid);
+  Serial.println("Botao Atualizar Pressionado");
+}
 //Vizualizar as linhas da programação manual
 #include "ProgramacaoManual.h"
 ProgramacaoManual prog_manual;
@@ -391,6 +400,8 @@ void setup()
   view_btn_prox.attachPop(view_btn_proxPopCallback);
   view_apagar.attachPush(view_apagarPushCallback);
 
+  settings_button.attachPush(settings_buttonPushCallback);
+
   wf_page_menu.attachPush(wf_page_menuPushCallback);
   wf_page_config.attachPush(wf_page_configPushCallback);
   wf_page_prog_man.attachPush(wf_page_prog_manPushCallback);
@@ -405,7 +416,7 @@ void setup()
 void loop()
 {
   //Atualiza o cliente para a atualização OTA
-  //server.handleClient();
+  server.handleClient();
   delay(1);
 
   //Esta função trabalha como um listener para os eventos de press e release dos objetos utilizados no NEXTION
@@ -417,10 +428,4 @@ void loop()
     atualiza_waveform();
     delay(20);
   }
-
-  view_ip.setText(WiFi.localIP().toString().c_str());
-  view_ssid.setText(ssid);
 }
-
-
-
