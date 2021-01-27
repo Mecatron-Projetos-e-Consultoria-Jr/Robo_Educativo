@@ -146,6 +146,11 @@ NexWaveform waveform = NexWaveform(1, 3, "s0");
 NexNumber wf_pino = NexNumber(1, 6, "n0");
 NexDSButton wf_bt_dig_ana = NexDSButton(1, 8, "bt0");
 NexPage page0 = NexPage(0, 0, "p_menu");
+
+//Nextion Text painel de settings
+NexText view_ip = NexText(2, 3, "t1");
+NexText view_ssid = NexText(2, 4, "t2");
+
 //Nesse array, declaramos os objetos Nextion que terão interação de eventos touch
 NexTouch *nex_listen_list[] =
     {
@@ -162,83 +167,6 @@ NexTouch *nex_listen_list[] =
         &view_btn_prox,
         &view_apagar,
         NULL};
-
-/*===========================================================================================================
-
-  Configurações Programação Manual
-
-  =============================================================================================================*/
-//Matriz responsável por guardar as informações da programação
-
-int prog_manual[45][3] = {
-    //{Pino, OUTPUT(0)/INPUT(1), Estado}
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0},
-    {0, 0, 0}};
-
-void programacao_manual()
-{
-  pinMode(2, OUTPUT); //LED
-  pinMode(4, OUTPUT); //Buzzer
-
-  //Executa os comandos da matriz prog_manual
-  int i = 0;
-  while (prog_manual[i][0] != 0)
-  {
-    if (prog_manual[i][0] == -1)
-    {
-      delay(prog_manual[i][2]);
-    }
-    else
-    {
-      digitalWrite(prog_manual[i][0], prog_manual[i][2]);
-    }
-    i++;
-  }
-}
-
 /*===========================================================================================================
 
   Comandos Nextion
@@ -268,6 +196,8 @@ void wf_page_voltarPushCallback(void *ptr)
 }
 
 //Vizualizar as linhas da programação manual
+#include "ProgramacaoManual.h"
+ProgramacaoManual prog_manual;
 void view_btn_antPopCallback(void *ptr)
 {
   if (view >= 1)
@@ -277,9 +207,9 @@ void view_btn_antPopCallback(void *ptr)
     memset(buffer, 0, sizeof(buffer));
     memset(buffer2, 0, sizeof(buffer2));
 
-    itoa(prog_manual[view][0], buffer, 10);
+    itoa(prog_manual.matrix[view][0], buffer, 10);
     view_sensor.setText(buffer);
-    itoa(prog_manual[view][2], buffer2, 10);
+    itoa(prog_manual.matrix[view][2], buffer2, 10);
     view_estado.setText(buffer2);
 
     view_linha.setValue(view);
@@ -295,9 +225,9 @@ void view_btn_proxPopCallback(void *ptr)
     memset(buffer, 0, sizeof(buffer));
     memset(buffer2, 0, sizeof(buffer2));
 
-    itoa(prog_manual[view][0], buffer, 10);
+    itoa(prog_manual.matrix[view][0], buffer, 10);
     view_sensor.setText(buffer);
-    itoa(prog_manual[view][2], buffer2, 10);
+    itoa(prog_manual.matrix[view][2], buffer2, 10);
     view_estado.setText(buffer2);
 
     view_linha.setValue(view);
@@ -306,9 +236,9 @@ void view_btn_proxPopCallback(void *ptr)
 void view_apagarPushCallback(void *ptr)
 {
   pos--;
-  prog_manual[pos][0] = 0;
-  prog_manual[pos][1] = 0;
-  prog_manual[pos][2] = 0;
+  prog_manual.matrix[pos][0] = 0;
+  prog_manual.matrix[pos][1] = 0;
+  prog_manual.matrix[pos][2] = 0;
 }
 
 //Comando para gravar a linha de código na matriz "programação manual"
@@ -318,9 +248,9 @@ void pm_btn_concluir_1PushCallback(void *ptr)
   pm_pino.getValue(&aux1);
   pm_estado.getValue(&aux2);
 
-  prog_manual[pos][0] = aux1;
-  prog_manual[pos][1] = 0;
-  prog_manual[pos][2] = aux2;
+  prog_manual.matrix[pos][0] = aux1;
+  prog_manual.matrix[pos][1] = 0;
+  prog_manual.matrix[pos][2] = aux2;
 
   pos++;
 }
@@ -330,16 +260,16 @@ void pm_btn_concluir_3PushCallback(void *ptr)
   uint32_t aux1;
   pm_delay.getValue(&aux1);
 
-  prog_manual[pos][0] = -1;
-  prog_manual[pos][1] = 0;
-  prog_manual[pos][2] = aux1 * 1000; //Converte de mili para segundos
+  prog_manual.matrix[pos][0] = -1;
+  prog_manual.matrix[pos][1] = 0;
+  prog_manual.matrix[pos][2] = aux1 * 1000; //Converte de mili para segundos
 
   pos++;
 }
 
 void pm_executarPushCallBack(void *ptr)
 {
-  programacao_manual();
+  prog_manual.executar();
 }
 /*===========================================================================================================
 
@@ -475,15 +405,8 @@ void setup()
 void loop()
 {
   //Atualiza o cliente para a atualização OTA
-  server.handleClient();
+  //server.handleClient();
   delay(1);
-  // contador_ms++;
-  // if (contador_ms >= 5000)
-  // {
-  //   contador_ms = 0;
-  //   Serial.print("IP obtido: ");
-  //   Serial.println(WiFi.localIP());
-  // }
 
   //Esta função trabalha como um listener para os eventos de press e release dos objetos utilizados no NEXTION
   nexLoop(nex_listen_list);
@@ -494,4 +417,10 @@ void loop()
     atualiza_waveform();
     delay(20);
   }
+
+  view_ip.setText(WiFi.localIP().toString().c_str());
+  view_ssid.setText(ssid);
 }
+
+
+

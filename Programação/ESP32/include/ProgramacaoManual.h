@@ -6,7 +6,7 @@ class ProgramacaoManual
 {
 public:
     ProgramacaoManual();
-    void executar(int a);
+    void executar();
     int matrix[45][3];
 
 private:

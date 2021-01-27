@@ -6,11 +6,11 @@ ProgramacaoManual::ProgramacaoManual()
     for (int i = 0; i < 45; i++)
     {
         for (int j = 0; j < 3; j++)
-            matrix[i][j] = i;
+            matrix[i][j] = 0;
     }
 }
 
-void ProgramacaoManual::executar(int a)
+void ProgramacaoManual::executar()
 {
     pinMode(2, OUTPUT); //LED
     pinMode(4, OUTPUT); //Buzzer
