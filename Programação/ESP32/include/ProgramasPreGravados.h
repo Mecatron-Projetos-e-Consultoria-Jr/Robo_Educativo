@@ -6,7 +6,7 @@ class ProgramasPreGravados
 {
 public:
     ProgramasPreGravados();
-    static void prog_1();
+    void prog_1();
     void prog_2();
     void prog_3();
     void prog_4();
