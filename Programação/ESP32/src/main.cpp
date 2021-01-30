@@ -12,8 +12,8 @@
 
 /* Constantes - conexão wi-fi e webserver */
 const char *host = "esp32";
-const char *ssid = "NET_C10D75";        /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
-const char *password = "RKtg/-O571eo,"; /* coloque aqui a senha da rede wi-fi que o ESP32 deve se conectar */
+const char *ssid = "tsumi";            /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
+const char *password = "odashima2019"; /* coloque aqui a senha da rede wi-fi que o ESP32 deve se conectar */
 
 /* Variáveis globais */
 int contador_ms = 0;
@@ -413,8 +413,13 @@ void setup()
   Loop
 
   =============================================================================================================*/
+#include "ProgramasPreGravados.h"
+ProgramasPreGravados prog;
+
 void loop()
 {
+  if (digitalRead(5) == LOW)
+    prog.prog_1();
   //Atualiza o cliente para a atualização OTA
   server.handleClient();
   delay(1);

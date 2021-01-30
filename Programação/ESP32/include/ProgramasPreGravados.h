@@ -7,13 +7,13 @@ class ProgramasPreGravados
 public:
     ProgramasPreGravados();
     static void prog_1();
-    static void prog_2();
-    static void prog_3();
-    static void prog_4();
-    static void prog_5();
-    static void prog_6();
-    static void prog_7();
-    static void prog_8();
+    void prog_2();
+    void prog_3();
+    void prog_4();
+    void prog_5();
+    void prog_6();
+    void prog_7();
+    void prog_8();
 
 private:
 };
