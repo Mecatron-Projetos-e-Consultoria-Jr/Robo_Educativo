@@ -12,8 +12,8 @@
 
 /* Constantes - conexão wi-fi e webserver */
 const char *host = "esp32";
-const char *ssid = "NET_C10D75";        /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
-const char *password = "RKtg/-O571eo,"; /* coloque aqui a senha da rede wi-fi que o ESP32 deve se conectar */
+const char *ssid = "tsumi";            /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
+const char *password = "odashima2019"; /* coloque aqui a senha da rede wi-fi que o ESP32 deve se conectar */
 
 /* Variáveis globais */
 int contador_ms = 0;
@@ -152,6 +152,17 @@ NexText view_ip = NexText(2, 3, "t1");
 NexText view_ssid = NexText(2, 4, "t2");
 NexButton settings_button = NexButton(2, 12, "b2");
 
+//Programas pré instalados
+NexButton progGrav1 = NexButton(7, 3, "b1");
+NexButton progGrav2 = NexButton(7, 4, "b2");
+NexButton progGrav3 = NexButton(7, 5, "b3");
+NexButton progGrav4 = NexButton(7, 6, "b4");
+NexButton progGrav5 = NexButton(7, 16, "b5");
+NexButton progGrav6 = NexButton(9, 3, "b1");
+NexButton progGrav7 = NexButton(9, 4, "b2");
+NexButton progGrav8 = NexButton(9, 5, "b3");
+//... FALTAM MAIS 3 BOTOES
+
 //Nesse array, declaramos os objetos Nextion que terão interação de eventos touch
 NexTouch *nex_listen_list[] =
     {
@@ -168,6 +179,14 @@ NexTouch *nex_listen_list[] =
         &view_btn_prox,
         &view_apagar,
         &settings_button,
+        &progGrav1,
+        &progGrav2,
+        &progGrav3,
+        &progGrav4,
+        &progGrav5,
+        &progGrav6,
+        &progGrav7,
+        &progGrav8,
         NULL};
 /*===========================================================================================================
 
@@ -301,6 +320,54 @@ void atualiza_waveform()
 }
 /*===========================================================================================================
 
+  Programas pré instalados
+
+  =============================================================================================================*/
+#include "ProgramasPreGravados.h"
+ProgramasPreGravados prog;
+
+void progGrav1PushCallBack(void *ptr)
+{
+  prog.prog_1();
+}
+
+void progGrav2PushCallBack(void *ptr)
+{
+  prog.prog_2();
+}
+
+void progGrav3PushCallBack(void *ptr)
+{
+  prog.prog_3();
+}
+
+void progGrav4PushCallBack(void *ptr)
+{
+  prog.prog_4();
+}
+
+void progGrav5PushCallBack(void *ptr)
+{
+  prog.prog_5();
+}
+
+void progGrav6PushCallBack(void *ptr)
+{
+  prog.prog_6();
+}
+
+void progGrav7PushCallBack(void *ptr)
+{
+  prog.prog_7();
+}
+
+void progGrav8PushCallBack(void *ptr)
+{
+  prog.prog_8();
+}
+
+/*===========================================================================================================
+
   Setup
 
   =============================================================================================================*/
@@ -407,12 +474,22 @@ void setup()
   wf_page_prog_man.attachPush(wf_page_prog_manPushCallback);
   wf_page_p_programas.attachPush(wf_page_p_programasPushCallback);
   wf_page_voltar.attachPush(wf_page_voltarPushCallback);
+
+  progGrav1.attachPush(progGrav1PushCallBack);
+  progGrav2.attachPush(progGrav2PushCallBack);
+  progGrav3.attachPush(progGrav3PushCallBack);
+  progGrav4.attachPush(progGrav4PushCallBack);
+  progGrav5.attachPush(progGrav5PushCallBack);
+  progGrav6.attachPush(progGrav6PushCallBack);
+  progGrav7.attachPush(progGrav7PushCallBack);
+  progGrav8.attachPush(progGrav8PushCallBack);
 }
 /*===========================================================================================================
 
   Loop
 
   =============================================================================================================*/
+
 void loop()
 {
   //Atualiza o cliente para a atualização OTA
