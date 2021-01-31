@@ -52,6 +52,12 @@ void ProgramasPreGravados::prog_2()
     progressBarValue = 0;
     progress_bar.setValue(progressBarValue);
 
+    for (int i = 0; i < 100; i++)
+    {
+        delay(1000);
+        progressBarValue = progressBarValue + 100 / 100;
+        progress_bar.setValue(progressBarValue);
+    }
     page7.show();
 }
 

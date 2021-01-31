@@ -158,6 +158,9 @@ NexButton progGrav2 = NexButton(7, 4, "b2");
 NexButton progGrav3 = NexButton(7, 5, "b3");
 NexButton progGrav4 = NexButton(7, 6, "b4");
 NexButton progGrav5 = NexButton(7, 16, "b5");
+NexButton progGrav6 = NexButton(9, 3, "b1");
+NexButton progGrav7 = NexButton(9, 4, "b2");
+NexButton progGrav8 = NexButton(9, 5, "b3");
 //... FALTAM MAIS 3 BOTOES
 
 //Nesse array, declaramos os objetos Nextion que terão interação de eventos touch
@@ -181,6 +184,9 @@ NexTouch *nex_listen_list[] =
         &progGrav3,
         &progGrav4,
         &progGrav5,
+        &progGrav6,
+        &progGrav7,
+        &progGrav8,
         NULL};
 /*===========================================================================================================
 
@@ -345,6 +351,21 @@ void progGrav5PushCallBack(void *ptr)
   prog.prog_5();
 }
 
+void progGrav6PushCallBack(void *ptr)
+{
+  prog.prog_6();
+}
+
+void progGrav7PushCallBack(void *ptr)
+{
+  prog.prog_7();
+}
+
+void progGrav8PushCallBack(void *ptr)
+{
+  prog.prog_8();
+}
+
 /*===========================================================================================================
 
   Setup
@@ -459,6 +480,9 @@ void setup()
   progGrav3.attachPush(progGrav3PushCallBack);
   progGrav4.attachPush(progGrav4PushCallBack);
   progGrav5.attachPush(progGrav5PushCallBack);
+  progGrav6.attachPush(progGrav6PushCallBack);
+  progGrav7.attachPush(progGrav7PushCallBack);
+  progGrav8.attachPush(progGrav8PushCallBack);
 }
 /*===========================================================================================================
 
