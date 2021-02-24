@@ -14,7 +14,7 @@ ProgramasPreGravados::ProgramasPreGravados()
 /* A ideia é que funcionem em um loop, ao apertar o botão de executar o programa o mesmo é executado
 repetidamente; até que se aperte novamente o mesmo botão, então ele para*/
 
-//Usar somente os leds da shield - semárforo
+//Usar somente os leds da shield - semáforo
 void ProgramasPreGravados::prog_1()
 {
     pinMode(2, OUTPUT);
