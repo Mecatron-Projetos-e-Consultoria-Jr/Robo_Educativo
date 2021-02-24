@@ -142,6 +142,8 @@ NexNumber pm_delay = NexNumber(6, 8, "n1");
 NexButton pm_btn_concluir_3 = NexButton(6, 7, "b5");
 NexButton pm_executar = NexButton(3, 17, "b11");
 
+NexPage page3 = NexPage(3, 0, "p_prog_man");
+
 NexWaveform waveform = NexWaveform(1, 3, "s0");
 NexNumber wf_pino = NexNumber(1, 6, "n0");
 NexDSButton wf_bt_dig_ana = NexDSButton(1, 8, "bt0");
@@ -232,14 +234,28 @@ void view_btn_antPopCallback(void *ptr)
   {
     view--;
 
-    memset(buffer, 0, sizeof(buffer));
-    memset(buffer2, 0, sizeof(buffer2));
+    //Escreve o tipo de sensor da linha selecionada
+    if (prog_manual.matrix[view][0] == 2)
+      view_sensor.setText("LED");
+    else if (prog_manual.matrix[view][0] == 4)
+      view_sensor.setText("BUZZER");
+    else if (prog_manual.matrix[view][0] == 0)
+      view_sensor.setText("N/D");
+    else
+      view_sensor.setText("DELAY");
 
-    itoa(prog_manual.matrix[view][0], buffer, 10);
-    view_sensor.setText(buffer);
-    itoa(prog_manual.matrix[view][2], buffer2, 10);
-    view_estado.setText(buffer2);
+    //Escreve o estado do sensor da linha selecionada
+    if (prog_manual.matrix[view][2] == 1)
+      view_estado.setText("LIGADO");
+    else if (prog_manual.matrix[view][2] == 0)
+      view_estado.setText("DESLIGADO");
+    else
+    {
+      itoa(prog_manual.matrix[view][2], buffer, 10);
+      view_estado.setText(buffer);
+    }
 
+    //Numero da Linha
     view_linha.setValue(view);
   }
 }
@@ -250,23 +266,39 @@ void view_btn_proxPopCallback(void *ptr)
   {
     view++;
 
-    memset(buffer, 0, sizeof(buffer));
-    memset(buffer2, 0, sizeof(buffer2));
+    //Escreve o tipo de sensor da linha selecionada
+    if (prog_manual.matrix[view][0] == 2)
+      view_sensor.setText("LED");
+    else if (prog_manual.matrix[view][0] == 4)
+      view_sensor.setText("BUZZER");
+    else if (prog_manual.matrix[view][0] == 0)
+      view_sensor.setText("N/D");
+    else
+      view_sensor.setText("DELAY");
 
-    itoa(prog_manual.matrix[view][0], buffer, 10);
-    view_sensor.setText(buffer);
-    itoa(prog_manual.matrix[view][2], buffer2, 10);
-    view_estado.setText(buffer2);
+    //Escreve o estado do sensor da linha selecionada
+    if (prog_manual.matrix[view][2] == 1)
+      view_estado.setText("LIGADO");
+    else if (prog_manual.matrix[view][2] == 0)
+      view_estado.setText("DESLIGADO");
+    else
+    {
+      itoa(prog_manual.matrix[view][2], buffer, 10);
+      view_estado.setText(buffer);
+    }
 
     view_linha.setValue(view);
   }
 }
 void view_apagarPushCallback(void *ptr)
 {
-  pos--;
-  prog_manual.matrix[pos][0] = 0;
-  prog_manual.matrix[pos][1] = 0;
-  prog_manual.matrix[pos][2] = 0;
+  if (pos > 0)
+  {
+    pos--;
+    prog_manual.matrix[pos][0] = 0;
+    prog_manual.matrix[pos][1] = 0;
+    prog_manual.matrix[pos][2] = 0;
+  }
 }
 
 //Comando para gravar a linha de código na matriz "programação manual"
@@ -281,6 +313,7 @@ void pm_btn_concluir_1PushCallback(void *ptr)
   prog_manual.matrix[pos][2] = aux2;
 
   pos++;
+  page3.show();
 }
 
 void pm_btn_concluir_3PushCallback(void *ptr)
@@ -293,6 +326,7 @@ void pm_btn_concluir_3PushCallback(void *ptr)
   prog_manual.matrix[pos][2] = aux1 * 1000; //Converte de mili para segundos
 
   pos++;
+  page3.show();
 }
 
 void pm_executarPushCallBack(void *ptr)
