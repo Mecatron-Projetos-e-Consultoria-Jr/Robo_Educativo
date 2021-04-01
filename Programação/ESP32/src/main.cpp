@@ -12,8 +12,8 @@
 
 /* Constantes - conexão wi-fi e webserver */
 const char *host = "esp32";
-const char *ssid = "tsumi";            /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
-const char *password = "odashima2019"; /* coloque aqui a senha da rede wi-fi que o ESP32 deve se conectar */
+const char *ssid = "NET_C10D75";            /* coloque aqui o nome da rede wi-fi que o ESP32 deve se conectar */
+const char *password = "RKtg/-O571eo,"; /* coloque aqui a senha da rede wi-fi que o ESP32 deve se conectar */
 
 /* Variáveis globais */
 int contador_ms = 0;
@@ -490,7 +490,14 @@ void setup()
     =============================================================================================================*/
   view = 0;
   pos = 0;
+  
+  pinMode(2, OUTPUT);
+  pinMode(21, INPUT_PULLUP);
+}
+
+void next_init(){
   //inicializa a comunicação com o nextion
+  //Esta função também pode ser chamada pelo void setup
   nexInit();
 
   pm_btn_concluir_1.attachPush(pm_btn_concluir_1PushCallback);
@@ -517,6 +524,8 @@ void setup()
   progGrav6.attachPush(progGrav6PushCallBack);
   progGrav7.attachPush(progGrav7PushCallBack);
   progGrav8.attachPush(progGrav8PushCallBack);
+
+  digitalWrite(2, 1);
 }
 /*===========================================================================================================
 
@@ -526,6 +535,10 @@ void setup()
 
 void loop()
 {
+  if(digitalRead(21) == LOW){
+    next_init();
+    delay(3000);
+  }
   //Atualiza o cliente para a atualização OTA
   server.handleClient();
   delay(1);
