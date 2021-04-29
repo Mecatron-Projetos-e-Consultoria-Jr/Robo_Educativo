@@ -7,3 +7,43 @@
 - O arquivo da programação principal está em Programação/ESP32/src/main.cpp. 
 - Antes de realizar o upload para o microcontrolador no arquivo main.cpp é preciso mudar as configurações da conexão wifi. Nas linhas 15 e 16 mude para o nome e senha de rede local, respectivamente.
 - Depois de tudo configurado, faça o upload da programação para a ESP32.
+
+-------------------------------------------------------------------------------------------------------------------
+
+# Reciclatron 
+
+## Project Overview 
+Projeto de captação dos dados de peso e altura do lixo em um container. Tais dados são enviados para um Raspberry pi Zero W, servindo como servidor local, via Lo-Ra, para que posteriormente possa fazer update de um banco de dados Firebase.
+
+### Tecnologias utilizadas
+
+#### Controle 
+
+|Tipo|Nome|
+|----|----|
+|Comunicação|`Lo-Ra`|
+|Banco de Dados|`Firebase`|
+|Sensor|`Célula de Carga - 50Kg`|
+|Sensor|`hc-sr04`|
+|Linguagem|`Python`|
+|Linguagem|`C++`|
+
+
+#### Eletrônica 
+
+|Tipo|Nome|
+|----|----|
+|Processador|`Raspberry Pi Zero W`|
+|Controlador|`atmega328p-pu`|
+|Módulo|`LoRa RFM95`|
+|Módulo|`HX711`|
+
+
+## Detalhes
+
+### Datas
+- Início - 020
+- Fim - 021
+### Membros Executores 
+- Goto - `ECA020`;
+- Pedro - `ECA020`.
