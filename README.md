@@ -1,4 +1,4 @@
-# Robo_Educativo
+# Robo_Educativo(Lembrar de tirar essa parte)
 ![alt text](https://enginoeducation.com/wp-content/uploads/2019/01/43.png)
 
 # Instalação
@@ -10,10 +10,10 @@
 
 -------------------------------------------------------------------------------------------------------------------
 
-# Reciclatron 
+# Robô Educativo
 
 ## Project Overview 
-Projeto de captação dos dados de peso e altura do lixo em um container. Tais dados são enviados para um Raspberry pi Zero W, servindo como servidor local, via Lo-Ra, para que posteriormente possa fazer update de um banco de dados Firebase.
+Desenvolvimento de uma interface hibrida que permite a integração e utilização de sensores de três diferentes kits robóticos de aprendizagem: Kazi EV5, Engino, Fischer Technik. Composto por 3 shields, e um centro de controle com uma tela touch para interação homem-máquina.
 
 ### Tecnologias utilizadas
 
@@ -38,12 +38,21 @@ Projeto de captação dos dados de peso e altura do lixo em um container. Tais d
 |Módulo|`LoRa RFM95`|
 |Módulo|`HX711`|
 
+#### Software
+
+|Tipo|Nome|
+|----|----|
+|Processador|`Raspberry Pi Zero W`|
+|Controlador|`atmega328p-pu`|
+|Módulo|`LoRa RFM95`|
+|Módulo|`HX711`|
+
 
 ## Detalhes
 
 ### Datas
 - Início - 020
-- Fim - 021
 ### Membros Executores 
-- Goto - `ECA020`;
-- Pedro - `ECA020`.
+- Crotti (saiu na metade do projeto)- `ECA019`;
+- Erik - `ECA019`;
+- Natália - `ECA020`.
