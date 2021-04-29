@@ -19227,67 +19227,6 @@ SMD type&lt;br&gt;</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="S2B-PH-K-S_LF__SN_">
-<packages>
-<package name="JST_S2B-PH-K-S(LF)(SN)">
-<wire x1="-2.95" y1="-6.25" x2="-2.95" y2="1.35" width="0.127" layer="51"/>
-<wire x1="-2.95" y1="1.35" x2="2.95" y2="1.35" width="0.127" layer="51"/>
-<wire x1="2.95" y1="1.35" x2="2.95" y2="-6.25" width="0.127" layer="51"/>
-<wire x1="2.95" y1="-6.25" x2="-2.95" y2="-6.25" width="0.127" layer="51"/>
-<wire x1="-2.95" y1="1.35" x2="2.95" y2="1.35" width="0.127" layer="21"/>
-<wire x1="2.95" y1="1.35" x2="2.95" y2="-6.25" width="0.127" layer="21"/>
-<wire x1="-2.95" y1="-6.25" x2="-2.95" y2="1.35" width="0.127" layer="21"/>
-<circle x="-1" y="1.9" radius="0.1" width="0.2" layer="21"/>
-<circle x="-1" y="1.9" radius="0.1" width="0.2" layer="51"/>
-<wire x1="-3.2" y1="-6.5" x2="-3.2" y2="1.6" width="0.05" layer="39"/>
-<wire x1="-3.2" y1="1.6" x2="3.2" y2="1.6" width="0.05" layer="39"/>
-<wire x1="3.2" y1="1.6" x2="3.2" y2="-6.5" width="0.05" layer="39"/>
-<wire x1="3.2" y1="-6.5" x2="-3.2" y2="-6.5" width="0.05" layer="39"/>
-<text x="-3.3" y="2.335" size="0.6096" layer="25">&gt;NAME</text>
-<text x="-3.3" y="-7.2" size="0.6096" layer="27">&gt;VALUE</text>
-<wire x1="2.95" y1="-6.25" x2="-2.95" y2="-6.25" width="0.127" layer="21"/>
-<pad name="2" x="1" y="0" drill="0.8"/>
-<pad name="1" x="-1" y="0" drill="0.8" shape="square"/>
-</package>
-</packages>
-<symbols>
-<symbol name="S2B-PH-K-S(LF)(SN)">
-<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
-<text x="-5.08" y="3.302" size="1.778" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-10.16" y="0" length="middle" direction="pas"/>
-<pin name="2" x="-10.16" y="-2.54" length="middle" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="S2B-PH-K-S(LF)(SN)" prefix="J">
-<description>PH Series 2 Position 2.0 mm Through Hole Side Entry Shrouded Header </description>
-<gates>
-<gate name="G$1" symbol="S2B-PH-K-S(LF)(SN)" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="JST_S2B-PH-K-S(LF)(SN)">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value=" Connector Header Through Hole, Right Angle 2 position "/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="455-1719-ND"/>
-<attribute name="MF" value="JST Sales America Inc."/>
-<attribute name="MP" value="S2B-PH-K-S(LF)(SN)"/>
-<attribute name="PACKAGE" value="Custom Package JST Sales America Inc."/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SFH_3716">
 <packages>
 <package name="TRANS_SFH_3716">
@@ -21690,6 +21629,166 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 </deviceset>
 </devicesets>
 </library>
+<library name="PJ-002A">
+<packages>
+<package name="CUI_PJ-002A">
+<text x="-0.690571875" y="6.135090625" size="1.27105" layer="25">&gt;NAME</text>
+<text x="-0.690815625" y="-6.417590625" size="1.2715" layer="27">&gt;VALUE</text>
+<wire x1="0.5" y1="-1.75" x2="-0.5" y2="-1.75" width="0.0001" layer="46"/>
+<wire x1="-0.5" y1="-1.75" x2="-0.5" y2="1.75" width="0.0001" layer="46"/>
+<wire x1="-0.5" y1="1.75" x2="0.5" y2="1.75" width="0.0001" layer="46"/>
+<wire x1="0.5" y1="1.75" x2="0.5" y2="-1.75" width="0.0001" layer="46"/>
+<wire x1="6.5" y1="-1.5" x2="5.5" y2="-1.5" width="0.0001" layer="46"/>
+<wire x1="5.5" y1="-1.5" x2="5.5" y2="1.5" width="0.0001" layer="46"/>
+<wire x1="5.5" y1="1.5" x2="6.5" y2="1.5" width="0.0001" layer="46"/>
+<wire x1="6.5" y1="1.5" x2="6.5" y2="-1.5" width="0.0001" layer="46"/>
+<wire x1="1.5" y1="4.2" x2="1.5" y2="5.2" width="0.0001" layer="46"/>
+<wire x1="1.5" y1="5.2" x2="4.5" y2="5.2" width="0.0001" layer="46"/>
+<wire x1="4.5" y1="5.2" x2="4.5" y2="4.2" width="0.0001" layer="46"/>
+<wire x1="4.5" y1="4.2" x2="1.5" y2="4.2" width="0.0001" layer="46"/>
+<wire x1="-0.7" y1="4.5" x2="13.7" y2="4.5" width="0.127" layer="51"/>
+<wire x1="13.7" y1="4.5" x2="13.7" y2="-4.5" width="0.127" layer="51"/>
+<wire x1="13.7" y1="-4.5" x2="-0.7" y2="-4.5" width="0.127" layer="51"/>
+<wire x1="-0.7" y1="-4.5" x2="-0.7" y2="4.5" width="0.127" layer="51"/>
+<wire x1="13.7" y1="4.5" x2="13.7" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="13.7" y1="-4.5" x2="-0.7" y2="-4.5" width="0.127" layer="21"/>
+<wire x1="-0.7" y1="4.5" x2="0.45" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-0.7" y1="-4.5" x2="-0.7" y2="-2.65" width="0.127" layer="21"/>
+<wire x1="5.55" y1="4.5" x2="13.7" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-0.7" y1="2.55" x2="-0.7" y2="4.5" width="0.127" layer="21"/>
+<wire x1="-1" y1="4.75" x2="0.45" y2="4.75" width="0.05" layer="39"/>
+<wire x1="0.45" y1="4.75" x2="0.45" y2="6.1" width="0.05" layer="39"/>
+<wire x1="0.45" y1="6.1" x2="5.55" y2="6.1" width="0.05" layer="39"/>
+<wire x1="5.55" y1="6.1" x2="5.55" y2="4.75" width="0.05" layer="39"/>
+<wire x1="5.55" y1="4.75" x2="14" y2="4.75" width="0.05" layer="39"/>
+<wire x1="14" y1="4.75" x2="14" y2="-4.75" width="0.05" layer="39"/>
+<wire x1="14" y1="-4.75" x2="-1" y2="-4.75" width="0.05" layer="39"/>
+<wire x1="-1" y1="-4.75" x2="-1" y2="-2.35" width="0.05" layer="39"/>
+<circle x="-2" y="0" radius="0.2" width="0.4" layer="21"/>
+<wire x1="-1" y1="2.25" x2="-1" y2="4.75" width="0.05" layer="39"/>
+<wire x1="-1" y1="2.25" x2="-1.55" y2="2.25" width="0.05" layer="39"/>
+<wire x1="-1.55" y1="2.25" x2="-1.55" y2="-2.35" width="0.05" layer="39"/>
+<wire x1="-1.55" y1="-2.35" x2="-1" y2="-2.35" width="0.05" layer="39"/>
+<pad name="1" x="0" y="0" drill="1" diameter="2.5" shape="long" rot="R90"/>
+<pad name="2" x="6" y="0" drill="1" diameter="2.25" shape="long" rot="R90"/>
+<pad name="3" x="3" y="4.7" drill="1" diameter="2.25" shape="long" rot="R180"/>
+</package>
+</packages>
+<symbols>
+<symbol name="PJ-002A">
+<wire x1="-5.715" y1="1.27" x2="-5.715" y2="3.81" width="0.1524" layer="94" curve="-180"/>
+<wire x1="-5.715" y1="3.81" x2="-1.27" y2="3.81" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="3.81" x2="-1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-5.715" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0.635" x2="0" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.635" x2="0" y2="4.445" width="0.1524" layer="94"/>
+<wire x1="0" y1="4.445" x2="-1.27" y2="4.445" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="4.445" x2="-1.27" y2="3.81" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-3.175" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="-2.54" x2="-3.81" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="-1.27" x2="-4.445" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<text x="-7.62118125" y="5.080790625" size="1.77828125" layer="95">&gt;NAME</text>
+<text x="-7.63235" y="-5.08823125" size="1.78088125" layer="96">&gt;VALUE</text>
+<polygon width="0.1524" layer="94">
+<vertex x="0" y="-2.54"/>
+<vertex x="-0.508" y="-1.27"/>
+<vertex x="0.508" y="-1.27"/>
+</polygon>
+<pin name="1" x="5.08" y="2.54" visible="pad" length="middle" direction="pas" rot="R180"/>
+<pin name="3" x="5.08" y="0" visible="pad" length="middle" direction="pas" rot="R180"/>
+<pin name="2" x="5.08" y="-2.54" visible="pad" length="middle" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PJ-002A" prefix="J">
+<description>2.0 mm Center Pin, 2.5 A, Right Angle, Through Hole, Dc Power Jack Connector &lt;a href="https://pricing.snapeda.com/parts/PJ-002A/CUI%20Devices/view-part?ref=eda"&gt;Check prices&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="PJ-002A" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CUI_PJ-002A">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Good"/>
+<attribute name="CUI_PURCHASE_URL" value="https://www.cuidevices.com/product/interconnect/connectors/dc-power-connectors/jacks/pj-002a?utm_source=snapeda.com&amp;utm_medium=referral&amp;utm_campaign=snapedaBOM"/>
+<attribute name="DESCRIPTION" value="2.0 x 6.5 mm, 2.5 A, Horizontal, Through Hole, Dc Power Jack Connector"/>
+<attribute name="MF" value="CUI Devices"/>
+<attribute name="MP" value="PJ-002A"/>
+<attribute name="PACKAGE" value="None"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/PJ-002A/?ref=eda"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="PS1240P02BT">
+<packages>
+<package name="XDCR_PS1240P02BT">
+<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
+<circle x="0" y="0" radius="6.35" width="0.05" layer="39"/>
+<text x="-5" y="7" size="1.778" layer="25">&gt;NAME</text>
+<text x="-5" y="-9" size="1.778" layer="27">&gt;VALUE</text>
+<pad name="1" x="-2.5" y="0" drill="0.85" diameter="1.28"/>
+<pad name="2" x="2.5" y="0" drill="0.85" diameter="1.28"/>
+</package>
+</packages>
+<symbols>
+<symbol name="PS1240P02BT">
+<text x="-3.81" y="3.81" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<wire x1="-1.905" y1="-2.54" x2="-1.905" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.905" y1="0" x2="-1.905" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="-1.27" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="-1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="2.54" x2="1.905" y2="0" width="0.254" layer="94"/>
+<wire x1="1.905" y1="0" x2="1.905" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.905" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PS1240P02BT" prefix="LS">
+<description>Buzzers Transducer, Externally Driven Piezo 3V 4kHz 60dB @ 3V, 10cm Through Hole PC Pins &lt;a href="https://pricing.snapeda.com/parts/PS1240P02BT/TDK%20Corporation/view-part?ref=eda"&gt;Check prices&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="PS1240P02BT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="XDCR_PS1240P02BT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Warning"/>
+<attribute name="DESCRIPTION" value=" Buzzers Transducer, Externally Driven Piezo 3V 4kHz 60dB @ 3V, 10cm Through Hole PC Pins "/>
+<attribute name="MF" value="TDK Corporation"/>
+<attribute name="MP" value="PS1240P02BT"/>
+<attribute name="PACKAGE" value="2020 TDK"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/PS1240P02BT/?ref=eda"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -21747,7 +21846,6 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <part name="C16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.01 uF"/>
 <part name="R58" library="Perfect_0402" deviceset="RES_0402" device="" value="1R"/>
 <part name="J3" library="ZX62-B-5PA" deviceset="ZX62-B-5PA" device=""/>
-<part name="J2" library="S2B-PH-K-S_LF__SN_" deviceset="S2B-PH-K-S(LF)(SN)" device=""/>
 <part name="Q4" library="SFH_3716" deviceset="SFH_3716" device=""/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/2" value="1k"/>
 <part name="V3" library="74ttl-din_modified" deviceset="74*08" device=""/>
@@ -21810,6 +21908,8 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <part name="JP7" library="con-headers-jp(1)" deviceset="F-1X05-" device="SIP-100-40"/>
 <part name="JP9" library="con-headers-jp(1)" library_urn="urn:adsk.eagle:library:24160814" deviceset="F-1X08-" device="SIP-100-40" package3d_urn="urn:adsk.eagle:package:24161226/2"/>
 <part name="B1" library="SparkFun-Boards" library_urn="urn:adsk.eagle:library:509" deviceset="ARDUINO_UNO_R3" device="" package3d_urn="urn:adsk.eagle:package:37330/1"/>
+<part name="J1" library="PJ-002A" deviceset="PJ-002A" device=""/>
+<part name="LS2" library="PS1240P02BT" deviceset="PS1240P02BT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21996,10 +22096,6 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 </instance>
 <instance part="J3" gate="G$1" x="-40.64" y="-2.54" smashed="yes">
 <attribute name="NAME" x="-50.8107" y="10.9362" size="1.77986875" layer="95"/>
-</instance>
-<instance part="J2" gate="G$1" x="38.1" y="68.58" smashed="yes" rot="R90">
-<attribute name="NAME" x="34.798" y="63.5" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="45.72" y="63.5" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="Q4" gate="G$1" x="543.56" y="114.3" smashed="yes" rot="R90">
 <attribute name="VALUE" x="551.18" y="104.14" size="1.778" layer="96" rot="R90"/>
@@ -22282,6 +22378,14 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <attribute name="NAME" x="599.948" y="74.422" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="599.44" y="12.446" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
+<instance part="J1" gate="G$1" x="40.64" y="64.77" smashed="yes" rot="R270">
+<attribute name="NAME" x="45.720790625" y="72.39118125" size="1.77828125" layer="95" rot="R270"/>
+<attribute name="VALUE" x="35.55176875" y="72.40235" size="1.78088125" layer="96" rot="R270"/>
+</instance>
+<instance part="LS2" gate="G$1" x="180.34" y="139.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="176.53" y="135.89" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="185.42" y="135.89" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -22406,8 +22510,10 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 </segment>
 <segment>
 <label x="38.1" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
-<pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="58.42" x2="38.1" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="3"/>
+<wire x1="38.1" y1="55.88" x2="38.1" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="55.88" x2="40.64" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="55.88" x2="40.64" y2="59.69" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
@@ -22542,6 +22648,11 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <wire x1="553.72" y1="229.87" x2="552.45" y2="229.87" width="0.1524" layer="91"/>
 <label x="552.45" y="231.14" size="1.778" layer="95" rot="R180"/>
 </segment>
+<segment>
+<pinref part="LS2" gate="G$1" pin="1"/>
+<wire x1="180.34" y1="134.62" x2="180.34" y2="132.08" width="0.1524" layer="91"/>
+<label x="180.34" y="132.08" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SCREEN_RX" class="0">
 <segment>
@@ -22667,13 +22778,6 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <pinref part="JP9" gate="G$1" pin="8"/>
 <wire x1="553.72" y1="224.79" x2="552.45" y2="224.79" width="0.1524" layer="91"/>
 <label x="552.45" y="226.06" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="5V" class="0">
-<segment>
-<pinref part="JP4" gate="A" pin="4"/>
-<wire x1="527.05" y1="-43.18" x2="535.94" y2="-43.18" width="0.1524" layer="91"/>
-<label x="535.94" y="-43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VDD33" class="1">
@@ -22807,6 +22911,11 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <wire x1="180.34" y1="172.72" x2="180.34" y2="175.26" width="0.1524" layer="91"/>
 <label x="180.34" y="175.26" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="LS2" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="144.78" x2="180.34" y2="147.32" width="0.1524" layer="91"/>
+<label x="180.34" y="147.32" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="EN" class="0">
 <segment>
@@ -22901,10 +23010,9 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <wire x1="43.18" y1="55.88" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="55.88" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
 <label x="43.18" y="53.34" size="1.27" layer="95" rot="R270" xref="yes"/>
-<pinref part="J2" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="58.42" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="58.42" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="59.69" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
 <junction x="43.18" y="55.88"/>
+<pinref part="J1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="D1" gate="A" pin="C"/>
@@ -23146,7 +23254,7 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <label x="48.26" y="134.62" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="GND_PWM~5V" class="0">
+<net name="GND_MOSFET" class="0">
 <segment>
 <pinref part="V3" gate="/+UB" pin="+UB"/>
 <wire x1="271.78" y1="163.83" x2="278.13" y2="163.83" width="0.1524" layer="91"/>
@@ -23244,6 +23352,21 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <pinref part="C41" gate="G$1" pin="+"/>
 <wire x1="327.66" y1="27.94" x2="327.66" y2="31.75" width="0.1524" layer="91"/>
 <junction x="327.66" y="31.75"/>
+</segment>
+<segment>
+<pinref part="JP9" gate="G$1" pin="2"/>
+<wire x1="553.72" y1="240.03" x2="552.45" y2="240.03" width="0.1524" layer="91"/>
+<label x="552.45" y="241.3" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="JP9" gate="G$1" pin="5"/>
+<wire x1="553.72" y1="232.41" x2="552.45" y2="232.41" width="0.1524" layer="91"/>
+<label x="552.45" y="233.68" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="JP4" gate="A" pin="4"/>
+<wire x1="527.05" y1="-43.18" x2="535.94" y2="-43.18" width="0.1524" layer="91"/>
+<label x="535.94" y="-43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$28" class="0">
@@ -23874,20 +23997,6 @@ Arduino Uno R3 Compatible Footprint. Matches PCB size of the original board.
 <pinref part="JP6" gate="G$1" pin="2"/>
 <wire x1="577.85" y1="227.33" x2="579.12" y2="227.33" width="0.1524" layer="91"/>
 <label x="579.12" y="226.06" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="5V(ATENçãO)-NãOESTACONECTADOEMNDA" class="0">
-<segment>
-<pinref part="JP9" gate="G$1" pin="5"/>
-<wire x1="553.72" y1="232.41" x2="552.45" y2="232.41" width="0.1524" layer="91"/>
-<label x="552.45" y="233.68" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="5V(NAOTACONECTADOEMNDA)" class="0">
-<segment>
-<pinref part="JP9" gate="G$1" pin="2"/>
-<wire x1="553.72" y1="240.03" x2="552.45" y2="240.03" width="0.1524" layer="91"/>
-<label x="552.45" y="241.3" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 </nets>
