@@ -21,11 +21,11 @@ Desenvolvimento de uma interface hibrida que permite a integração e utilizaç�
 
 |Tipo|Nome|
 |----|----|
-|Comunicação|`Lo-Ra`|
-|Banco de Dados|`Firebase`|
-|Sensor|`Célula de Carga - 50Kg`|
-|Sensor|`hc-sr04`|
-|Linguagem|`Python`|
+|Sensor|`Fischer`|
+|Sensor|`Engino`|
+|Sensor|`Kazi`|
+|Sensor|`Grove`|
+|Comunicação|`OTA`|
 |Linguagem|`C++`|
 
 
@@ -33,20 +33,13 @@ Desenvolvimento de uma interface hibrida que permite a integração e utilizaç�
 
 |Tipo|Nome|
 |----|----|
-|Processador|`Raspberry Pi Zero W`|
-|Controlador|`atmega328p-pu`|
-|Módulo|`LoRa RFM95`|
-|Módulo|`HX711`|
+|Controlador|`ESP32`|
 
 #### Software
 
 |Tipo|Nome|
 |----|----|
-|Processador|`Raspberry Pi Zero W`|
-|Controlador|`atmega328p-pu`|
-|Módulo|`LoRa RFM95`|
-|Módulo|`HX711`|
-
+|Interface|`Nextion Touch Screen`|
 
 ## Detalhes
 
