@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="3.125" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="6.125" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -2589,21 +2589,21 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="83F4463" x="211.614" y="150.495" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="103.664" y="66.04" size="1.778" layer="27" rot="R90"/>
 </element>
-<element name="JP2" library="pinhead-1" package="1X08SMD" override_package3d_urn="urn:adsk.eagle:package:24181674/2" override_package_urn="urn:adsk.eagle:footprint:24181675/1" value="" x="69.21505" y="55.88" smashed="yes" rot="MR0">
-<attribute name="NAME" x="71.83125" y="57.7088" size="1.27" layer="26" ratio="10" rot="MR0"/>
-<attribute name="VALUE" x="71.75505" y="52.705" size="1.27" layer="28" rot="MR0"/>
+<element name="JP2" library="pinhead-1" package="1X08SMD" override_package3d_urn="urn:adsk.eagle:package:24181674/2" override_package_urn="urn:adsk.eagle:footprint:24181675/1" value="" x="69.3738" y="56.118125" smashed="yes" rot="MR0">
+<attribute name="NAME" x="71.99" y="57.946925" size="1.27" layer="26" ratio="10" rot="MR0"/>
+<attribute name="VALUE" x="71.9138" y="52.943125" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="JP5" library="pinhead-1" package="1X08SMD" override_package3d_urn="urn:adsk.eagle:package:24181670/2" override_package_urn="urn:adsk.eagle:footprint:24181671/1" value="" x="51.43505" y="7.62" smashed="yes" rot="MR0">
-<attribute name="NAME" x="54.05125" y="9.4488" size="1.27" layer="26" ratio="10" rot="MR0"/>
-<attribute name="VALUE" x="53.97505" y="4.445" size="1.27" layer="28" rot="MR0"/>
+<element name="JP5" library="pinhead-1" package="1X08SMD" override_package3d_urn="urn:adsk.eagle:package:24181670/2" override_package_urn="urn:adsk.eagle:footprint:24181671/1" value="" x="51.5938" y="7.858125" smashed="yes" rot="MR0">
+<attribute name="NAME" x="54.21" y="9.686925" size="1.27" layer="26" ratio="10" rot="MR0"/>
+<attribute name="VALUE" x="54.1338" y="4.683125" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="JP6" library="pinhead-1" package="1X06SMD" override_package3d_urn="urn:adsk.eagle:package:24181677/2" override_package_urn="urn:adsk.eagle:footprint:24181678/1" value="" x="46.35495" y="55.880025" smashed="yes" rot="MR0">
-<attribute name="NAME" x="48.97115" y="57.708825" size="1.27" layer="26" ratio="10" rot="MR0"/>
-<attribute name="VALUE" x="48.89495" y="52.705025" size="1.27" layer="28" rot="MR0"/>
+<element name="JP6" library="pinhead-1" package="1X06SMD" override_package3d_urn="urn:adsk.eagle:package:24181677/2" override_package_urn="urn:adsk.eagle:footprint:24181678/1" value="" x="46.8312" y="55.6419" smashed="yes" rot="MR0">
+<attribute name="NAME" x="49.4474" y="57.4707" size="1.27" layer="26" ratio="10" rot="MR0"/>
+<attribute name="VALUE" x="49.3712" y="52.4669" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="JP1" library="pinhead-1" package="1X10SMD" value="" x="58.023125" y="7.62" smashed="yes" rot="MR180">
-<attribute name="NAME" x="52.231925" y="7.6962" size="1.27" layer="26" ratio="10" rot="MR180"/>
-<attribute name="VALUE" x="45.323125" y="10.795" size="1.27" layer="28" rot="MR180"/>
+<element name="JP1" library="pinhead-1" package="1X10SMD" value="" x="58.499375" y="7.858125" smashed="yes" rot="MR180">
+<attribute name="NAME" x="52.708175" y="7.934325" size="1.27" layer="26" ratio="10" rot="MR180"/>
+<attribute name="VALUE" x="45.799375" y="11.033125" size="1.27" layer="28" rot="MR180"/>
 </element>
 <element name="B1" library="SparkFun-Boards" library_urn="urn:adsk.eagle:library:509" package="ARDUINO_R3" package3d_urn="urn:adsk.eagle:package:37330/1" value="ARDUINO_UNO_R3" x="65.405" y="31.75" smashed="yes" rot="R180">
 <attribute name="NAME" x="65.405" y="3.81" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
@@ -2644,7 +2644,7 @@ design rules under a new name.</description>
 <wire x1="71.755" y1="69.342" x2="97.314" y2="73.66" width="0" layer="19" extent="1-1"/>
 <wire x1="70.485" y1="66.802" x2="71.755" y2="69.342" width="0" layer="19" extent="1-1"/>
 <wire x1="44.45" y1="66.802" x2="70.485" y2="66.802" width="0" layer="19" extent="1-1"/>
-<wire x1="60.32505" y1="57.15" x2="44.45" y2="66.802" width="0" layer="19" extent="16-16"/>
+<wire x1="60.4838" y1="57.388125" x2="44.45" y2="66.802" width="0" layer="19" extent="16-16"/>
 <wire x1="19.6056" y1="69.1356" x2="44.45" y2="66.802" width="0" layer="19" extent="1-1"/>
 <wire x1="19.6056" y1="49.7681" x2="19.6056" y2="69.1356" width="0" layer="19" extent="1-1"/>
 <wire x1="19.4469" y1="29.7656" x2="19.6056" y2="49.7681" width="0" layer="19" extent="1-1"/>
@@ -2669,10 +2669,10 @@ design rules under a new name.</description>
 <contactref element="JP2" pad="6"/>
 <contactref element="JP2" pad="2"/>
 <contactref element="JP1" pad="7"/>
-<wire x1="55.24505" y1="57.15" x2="45.72" y2="69.342" width="0" layer="19" extent="16-16"/>
-<wire x1="57.78505" y1="54.61" x2="55.24505" y2="57.15" width="0" layer="19" extent="16-16"/>
-<wire x1="67.94505" y1="54.61" x2="57.78505" y2="54.61" width="0" layer="19" extent="16-16"/>
-<wire x1="71.993125" y1="6.35" x2="67.94505" y2="54.61" width="0" layer="19" extent="16-16"/>
+<wire x1="55.4038" y1="57.388125" x2="45.72" y2="69.342" width="0" layer="19" extent="16-16"/>
+<wire x1="57.9438" y1="54.848125" x2="55.4038" y2="57.388125" width="0" layer="19" extent="16-16"/>
+<wire x1="68.1038" y1="54.848125" x2="57.9438" y2="54.848125" width="0" layer="19" extent="16-16"/>
+<wire x1="72.469375" y1="6.588125" x2="68.1038" y2="54.848125" width="0" layer="19" extent="16-16"/>
 <wire x1="17.0656" y1="70.4056" x2="45.72" y2="69.342" width="0" layer="19" extent="1-1"/>
 <wire x1="17.0656" y1="51.0381" x2="17.0656" y2="70.4056" width="0" layer="19" extent="1-1"/>
 <wire x1="16.9069" y1="31.0356" x2="17.0656" y2="51.0381" width="0" layer="19" extent="1-1"/>
@@ -2689,7 +2689,7 @@ design rules under a new name.</description>
 <wire x1="19.6056" y1="52.3081" x2="19.6056" y2="71.6756" width="0" layer="19" extent="1-1"/>
 <wire x1="19.4469" y1="32.3056" x2="19.6056" y2="52.3081" width="0" layer="19" extent="1-1"/>
 <wire x1="19.2881" y1="11.6681" x2="19.4469" y2="32.3056" width="0" layer="19" extent="1-1"/>
-<wire x1="79.613125" y1="8.89" x2="46.99" y2="66.802" width="0" layer="19" extent="16-16"/>
+<wire x1="80.089375" y1="9.128125" x2="46.99" y2="66.802" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="I2C_SDA~5V">
 <contactref element="J3" pad="1"/>
@@ -2702,73 +2702,73 @@ design rules under a new name.</description>
 <wire x1="19.6056" y1="54.8481" x2="19.6056" y2="74.2156" width="0" layer="19" extent="1-1"/>
 <wire x1="19.4469" y1="34.8456" x2="19.6056" y2="54.8481" width="0" layer="19" extent="1-1"/>
 <wire x1="19.2881" y1="14.2081" x2="19.4469" y2="34.8456" width="0" layer="19" extent="1-1"/>
-<wire x1="77.073125" y1="6.35" x2="49.53" y2="66.802" width="0" layer="19" extent="16-16"/>
+<wire x1="77.549375" y1="6.588125" x2="49.53" y2="66.802" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO33">
 <contactref element="JP5" pad="2"/>
 <contactref element="J10" pad="6"/>
-<wire x1="50.16505" y1="6.35" x2="99.854" y2="55.0863" width="0" layer="19" extent="16-16"/>
+<wire x1="50.3238" y1="6.588125" x2="99.854" y2="55.0863" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO32">
 <contactref element="JP5" pad="3"/>
 <contactref element="J8" pad="6"/>
-<wire x1="47.62505" y1="8.89" x2="69.215" y2="69.342" width="0" layer="19" extent="16-16"/>
+<wire x1="47.7838" y1="9.128125" x2="69.215" y2="69.342" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO27">
 <contactref element="JP5" pad="4"/>
 <contactref element="J9" pad="6"/>
-<wire x1="45.08505" y1="6.35" x2="99.854" y2="74.93" width="0" layer="19" extent="16-16"/>
+<wire x1="45.2438" y1="6.588125" x2="99.854" y2="74.93" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO2">
 <contactref element="JP6" pad="1"/>
 <contactref element="J3" pad="2"/>
-<wire x1="17.0656" y1="53.5781" x2="47.62495" y2="57.150025" width="0" layer="19" extent="16-16"/>
+<wire x1="17.0656" y1="53.5781" x2="48.1012" y2="56.9119" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO4">
 <contactref element="JP6" pad="2"/>
 <contactref element="J4" pad="2"/>
-<wire x1="16.9069" y1="33.5756" x2="45.08495" y2="54.610025" width="0" layer="19" extent="16-16"/>
+<wire x1="16.9069" y1="33.5756" x2="45.5612" y2="54.3719" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO12">
 <contactref element="JP6" pad="3"/>
 <contactref element="J5" pad="2"/>
 <contactref element="JP5" pad="1"/>
 <contactref element="J2" pad="6"/>
-<wire x1="52.70505" y1="8.89" x2="99.695" y2="35.2425" width="0" layer="19" extent="16-16"/>
-<wire x1="42.54495" y1="57.150025" x2="52.70505" y2="8.89" width="0" layer="19" extent="16-16"/>
-<wire x1="16.7481" y1="12.9381" x2="52.70505" y2="8.89" width="0" layer="19" extent="16-16"/>
+<wire x1="52.8638" y1="9.128125" x2="99.695" y2="35.2425" width="0" layer="19" extent="16-16"/>
+<wire x1="43.0212" y1="56.9119" x2="52.8638" y2="9.128125" width="0" layer="19" extent="16-16"/>
+<wire x1="16.7481" y1="12.9381" x2="52.8638" y2="9.128125" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO26">
 <contactref element="JP5" pad="5"/>
 <contactref element="J1" pad="6"/>
-<wire x1="42.54505" y1="8.89" x2="99.378" y2="13.6525" width="0" layer="19" extent="16-16"/>
+<wire x1="42.7038" y1="9.128125" x2="99.378" y2="13.6525" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="VP_SENSOR_IN">
 <contactref element="J5" pad="6"/>
 <contactref element="JP6" pad="5"/>
 <contactref element="J7" pad="2"/>
-<wire x1="37.46495" y1="57.150025" x2="48.26" y2="69.342" width="0" layer="19" extent="16-16"/>
-<wire x1="16.7481" y1="7.8581" x2="37.46495" y2="57.150025" width="0" layer="19" extent="16-16"/>
+<wire x1="37.9412" y1="56.9119" x2="48.26" y2="69.342" width="0" layer="19" extent="16-16"/>
+<wire x1="16.7481" y1="7.8581" x2="37.9412" y2="56.9119" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="VN_SENSOR_IN">
 <contactref element="J6" pad="6"/>
 <contactref element="JP6" pad="6"/>
-<wire x1="17.0656" y1="67.8656" x2="34.92495" y2="54.610025" width="0" layer="19" extent="16-16"/>
+<wire x1="17.0656" y1="67.8656" x2="35.4012" y2="54.3719" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO25">
 <contactref element="JP5" pad="6"/>
 <contactref element="J1" pad="2"/>
-<wire x1="40.00505" y1="6.35" x2="99.378" y2="8.5725" width="0" layer="19" extent="16-16"/>
+<wire x1="40.1638" y1="6.588125" x2="99.378" y2="8.5725" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="TX0">
 <contactref element="JP5" pad="7"/>
 <contactref element="J2" pad="2"/>
-<wire x1="37.46505" y1="8.89" x2="99.695" y2="30.1625" width="0" layer="19" extent="16-16"/>
+<wire x1="37.6238" y1="9.128125" x2="99.695" y2="30.1625" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="RX0">
 <contactref element="JP5" pad="8"/>
 <contactref element="J10" pad="2"/>
-<wire x1="34.92505" y1="6.35" x2="99.854" y2="50.0063" width="0" layer="19" extent="16-16"/>
+<wire x1="35.0838" y1="6.588125" x2="99.854" y2="50.0063" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO18">
 <contactref element="JP1" pad="6"/>
@@ -2776,7 +2776,7 @@ design rules under a new name.</description>
 <signal name="IO19">
 <contactref element="JP1" pad="5"/>
 <contactref element="J9" pad="2"/>
-<wire x1="66.913125" y1="6.35" x2="99.854" y2="69.85" width="0" layer="19" extent="16-16"/>
+<wire x1="67.389375" y1="6.588125" x2="99.854" y2="69.85" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO23">
 <contactref element="JP1" pad="4"/>
@@ -2785,26 +2785,26 @@ design rules under a new name.</description>
 <contactref element="JP1" pad="1"/>
 <contactref element="J3" pad="6"/>
 <contactref element="J8" pad="2"/>
-<wire x1="64.373125" y1="8.89" x2="74.295" y2="69.342" width="0" layer="19" extent="16-16"/>
-<wire x1="56.753125" y1="6.35" x2="64.373125" y2="8.89" width="0" layer="19" extent="16-16"/>
-<wire x1="40.00495" y1="54.610025" x2="56.753125" y2="6.35" width="0" layer="19" extent="16-16"/>
-<wire x1="17.0656" y1="48.4981" x2="40.00495" y2="54.610025" width="0" layer="19" extent="16-16"/>
+<wire x1="64.849375" y1="9.128125" x2="74.295" y2="69.342" width="0" layer="19" extent="16-16"/>
+<wire x1="57.229375" y1="6.588125" x2="64.849375" y2="9.128125" width="0" layer="19" extent="16-16"/>
+<wire x1="40.4812" y1="54.3719" x2="57.229375" y2="6.588125" width="0" layer="19" extent="16-16"/>
+<wire x1="17.0656" y1="48.4981" x2="40.4812" y2="54.3719" width="0" layer="19" extent="16-16"/>
 <wire x1="17.0656" y1="72.9456" x2="17.0656" y2="48.4981" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IO5">
 <contactref element="JP1" pad="3"/>
 <contactref element="J7" pad="6"/>
-<wire x1="61.833125" y1="6.35" x2="43.18" y2="69.342" width="0" layer="19" extent="16-16"/>
+<wire x1="62.309375" y1="6.588125" x2="43.18" y2="69.342" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="IO15">
 <contactref element="JP1" pad="2"/>
 <contactref element="J4" pad="6"/>
-<wire x1="16.9069" y1="28.4956" x2="59.293125" y2="8.89" width="0" layer="19" extent="16-16"/>
+<wire x1="16.9069" y1="28.4956" x2="59.769375" y2="9.128125" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="RESET">
 <contactref element="JP2" pad="3"/>
 <contactref element="JP1" pad="8"/>
-<wire x1="74.533125" y1="8.89" x2="65.40505" y2="57.15" width="0" layer="19" extent="16-16"/>
+<wire x1="75.009375" y1="9.128125" x2="65.5638" y2="57.388125" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="VDD33">
 <contactref element="JP2" pad="4"/>

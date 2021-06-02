@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="6.125" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="yes" active="yes"/>
@@ -1530,21 +1530,6 @@ http://www.bccomponents.com/</description>
 <text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
 <rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-</package>
-<package name="1X01SMD">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt; - 2.54 SMD</description>
-<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<smd name="1" x="-1.27" y="1.27" dx="3.302" dy="1.016" layer="1" rot="R90"/>
-<text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
 </package>
 </packages>
 </library>
@@ -3300,9 +3285,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="49.53" y="5.715" size="1.016" layer="25" ratio="18" rot="R90"/>
 <attribute name="VALUE" x="71.755" y="5.715" size="0.8128" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="B1" library="SparkFun-Boards" library_urn="urn:adsk.eagle:library:509" package="ARDUINO_R3" package3d_urn="urn:adsk.eagle:package:37330/1" value="ARDUINO_UNO_R3" x="184.4675" y="-0.635" smashed="yes">
-<attribute name="NAME" x="184.4675" y="27.305" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="VALUE" x="184.4675" y="-28.575" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="B1" library="SparkFun-Boards" library_urn="urn:adsk.eagle:library:509" package="ARDUINO_R3" package3d_urn="urn:adsk.eagle:package:37330/1" value="ARDUINO_UNO_R3" x="56.441975" y="31.213425" smashed="yes">
+<attribute name="NAME" x="56.441975" y="59.153425" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="VALUE" x="56.441975" y="3.273425" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
 <element name="J1" library="PJ-002A" package="CUI_PJ-002A" value="PJ-002A" x="13.97" y="21.59" smashed="yes" rot="R180">
 <attribute name="AVAILABILITY" value="Good" x="13.97" y="21.59" size="1.778" layer="27" rot="R180" display="off"/>
@@ -3398,10 +3383,6 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="45" x="7.62" y="63.5" size="1.778" layer="27" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="7.62" y="63.5" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="6.35" y="73.66" size="1.27" layer="27"/>
-</element>
-<element name="JP2" library="pinhead-1" package="1X01SMD" value="" x="8.5725" y="42.545" smashed="yes" rot="R270">
-<attribute name="NAME" x="10.4013" y="45.1612" size="1.27" layer="25" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="5.3975" y="45.085" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="U$2" library="tango" package="L7805" value="-L7805" x="9.2075" y="110.49" smashed="yes">
 <attribute name="NAME" x="4.7625" y="108.585" size="1.27" layer="25" rot="R90"/>
@@ -3522,8 +3503,8 @@ design rules under a new name.</description>
 <polygon width="0.2032" layer="16">
 <vertex x="2.54" y="150.1775"/>
 <vertex x="2.54" y="14.2875"/>
-<vertex x="11.1125" y="5.715"/>
-<vertex x="125.73" y="5.715"/>
+<vertex x="13.6525" y="3.175"/>
+<vertex x="123.19" y="3.175"/>
 <vertex x="136.525" y="16.51"/>
 <vertex x="136.525" y="141.9225"/>
 <vertex x="128.27" y="150.1775"/>
@@ -3803,7 +3784,7 @@ design rules under a new name.</description>
 <contactref element="CHARGER" pad="P$11"/>
 <contactref element="C16" pad="2"/>
 </signal>
-<signal name="GND_MOSFET">
+<signal name="GND_MOSFET~5V">
 <contactref element="V3" pad="14"/>
 <contactref element="V4" pad="14"/>
 <contactref element="D10" pad="3"/>
@@ -3819,7 +3800,6 @@ design rules under a new name.</description>
 <contactref element="C40" pad="2"/>
 <contactref element="C41" pad="+"/>
 <contactref element="JP4" pad="4"/>
-<contactref element="JP2" pad="1"/>
 <contactref element="JP9" pad="5"/>
 <contactref element="D14" pad="3"/>
 <contactref element="C42" pad="2"/>
@@ -3856,6 +3836,8 @@ design rules under a new name.</description>
 <wire x1="64.6" y1="88.5825" x2="76.665" y2="88.5825" width="0" layer="19" extent="16-16"/>
 <wire x1="52.535" y1="88.5825" x2="64.6" y2="88.5825" width="0" layer="19" extent="16-16"/>
 <wire x1="24.57285" y1="86.991825" x2="52.535" y2="88.5825" width="0" layer="19" extent="1-16"/>
+<wire x1="13.97" y1="90.485" x2="24.57285" y2="86.991825" width="0" layer="19" extent="1-1"/>
+<wire x1="13.97" y1="93.665" x2="13.97" y2="90.485" width="0" layer="19" extent="1-1"/>
 <wire x1="29.21" y1="45.585" x2="24.57285" y2="86.991825" width="0" layer="19" extent="1-16"/>
 <wire x1="34.29" y1="41.985" x2="29.21" y2="45.585" width="0" layer="19" extent="16-16"/>
 <wire x1="23.495" y1="41.985" x2="29.21" y2="45.585" width="0" layer="19" extent="16-16"/>
@@ -3865,10 +3847,7 @@ design rules under a new name.</description>
 <wire x1="23.495" y1="29.285" x2="23.495" y2="32.885" width="0" layer="19" extent="16-16"/>
 <wire x1="23.495" y1="17.645" x2="23.495" y2="29.285" width="0" layer="19" extent="16-16"/>
 <wire x1="34.29" y1="16.645" x2="23.495" y2="17.645" width="0" layer="19" extent="16-16"/>
-<wire x1="9.8425" y1="43.815" x2="23.495" y2="41.985" width="0" layer="19" extent="1-16"/>
 <wire x1="61.595" y1="6.985" x2="34.29" y2="16.645" width="0" layer="19" extent="16-16"/>
-<wire x1="13.97" y1="90.485" x2="23.495" y2="17.645" width="0" layer="19" extent="1-16"/>
-<wire x1="13.97" y1="93.665" x2="13.97" y2="90.485" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$28">
 <contactref element="V3" pad="3"/>
@@ -3946,11 +3925,15 @@ design rules under a new name.</description>
 <contactref element="S5" pad="O"/>
 <contactref element="J4" pad="6"/>
 <contactref element="R13" pad="2"/>
+<wire x1="86.995" y1="6.985" x2="126.365" y2="15.875" width="0" layer="19" extent="1-1"/>
+<wire x1="13.65" y1="82.55" x2="86.995" y2="6.985" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VP_SENSOR_IN">
 <contactref element="S4" pad="O"/>
 <contactref element="J4" pad="5"/>
 <contactref element="R11" pad="2"/>
+<wire x1="84.455" y1="6.985" x2="127.9525" y2="26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="13.65" y1="76.2" x2="84.455" y2="6.985" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VN_SENSOR_LDR">
 <contactref element="Q4" pad="2"/>
