@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="3.125" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="12.5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -1901,6 +1901,37 @@
 <wire x1="5.4769" y1="1.9844" x2="111.422" y2="2.0638" width="0" layer="20"/>
 <wire x1="111.422" y1="2.0638" x2="111.422" y2="80.9752" width="0" layer="20"/>
 <wire x1="111.422" y1="80.9752" x2="5.4769" y2="80.9752" width="0" layer="20"/>
+<text x="34.29" y="10.795" size="1.778" layer="26" rot="MR90">RX0</text>
+<text x="36.83" y="10.795" size="1.778" layer="26" rot="MR90">TX0</text>
+<text x="39.37" y="10.795" size="1.778" layer="26" rot="MR90">IO25</text>
+<text x="41.91" y="10.795" size="1.778" layer="26" rot="MR90">IO26</text>
+<text x="44.45" y="10.795" size="1.778" layer="26" rot="MR90">IO27</text>
+<text x="46.99" y="10.795" size="1.778" layer="26" rot="MR90">IO32</text>
+<text x="49.53" y="10.795" size="1.778" layer="26" rot="MR90">IO33</text>
+<text x="52.07" y="10.795" size="1.778" layer="26" rot="MR90">IO12</text>
+<text x="56.1975" y="10.795" size="1.778" layer="26" rot="MR90">IO23</text>
+<text x="58.7375" y="10.795" size="1.778" layer="26" rot="MR90">IO15</text>
+<text x="61.2775" y="10.795" size="1.778" layer="26" rot="MR90">IO5</text>
+<text x="63.8175" y="10.795" size="1.778" layer="26" rot="MR90">IO23</text>
+<text x="66.3575" y="10.795" size="1.778" layer="26" rot="MR90">IO19</text>
+<text x="68.8975" y="10.795" size="1.778" layer="26" rot="MR90">IO18</text>
+<text x="71.4375" y="10.795" size="1.778" layer="26" rot="MR90">GND</text>
+<text x="73.9775" y="10.795" size="1.778" layer="26" rot="MR90">RESET</text>
+<text x="76.5175" y="10.795" size="1.778" layer="26" rot="MR90">SDA</text>
+<text x="79.0575" y="10.795" size="1.778" layer="26" rot="MR90">SCL</text>
+<text x="67.31" y="47.3075" size="1.778" layer="26" rot="MR90">GND</text>
+<text x="64.77" y="44.45" size="1.778" layer="26" rot="MR90">RESET</text>
+<text x="62.23" y="44.7675" size="1.778" layer="26" rot="MR90">VDD33</text>
+<text x="59.69" y="49.53" size="1.778" layer="26" rot="MR90">5V</text>
+<text x="57.15" y="47.3075" size="1.778" layer="26" rot="MR90">GND</text>
+<text x="54.61" y="47.3075" size="1.778" layer="26" rot="MR90">GND</text>
+<text x="52.07" y="48.5775" size="1.778" layer="26" rot="MR90">VIN</text>
+<text x="46.99" y="48.895" size="1.778" layer="26" rot="MR90">IO2</text>
+<text x="44.45" y="48.895" size="1.778" layer="26" rot="MR90">IO4</text>
+<text x="41.91" y="47.625" size="1.778" layer="26" rot="MR90">IO12</text>
+<text x="39.37" y="47.625" size="1.778" layer="26" rot="MR90">IO23</text>
+<text x="36.83" y="49.8475" size="1.778" layer="26" rot="MR90">VP</text>
+<text x="34.29" y="49.53" size="1.778" layer="26" rot="MR90">VN</text>
 </plain>
 <libraries>
 <library name="con-tycoelectronics">
@@ -2605,9 +2636,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="52.231925" y="7.6962" size="1.27" layer="26" ratio="10" rot="MR180"/>
 <attribute name="VALUE" x="45.323125" y="10.795" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="B1" library="SparkFun-Boards" library_urn="urn:adsk.eagle:library:509" package="ARDUINO_R3" package3d_urn="urn:adsk.eagle:package:37330/1" value="ARDUINO_UNO_R3" x="65.405" y="31.75" smashed="yes" rot="R180">
-<attribute name="NAME" x="65.405" y="3.81" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
-<attribute name="VALUE" x="65.405" y="59.69" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
+<element name="B1" library="SparkFun-Boards" library_urn="urn:adsk.eagle:library:509" package="ARDUINO_R3" package3d_urn="urn:adsk.eagle:package:37330/1" value="ARDUINO_UNO_R3" x="152.55875" y="30.7975" smashed="yes" rot="R180">
+<attribute name="NAME" x="152.55875" y="2.8575" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
+<attribute name="VALUE" x="152.55875" y="58.7375" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
 </elements>
 <signals>
