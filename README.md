@@ -1,3 +1,4 @@
+![Status Projeto](https://img.shields.io/badge/Status-Cancelado-red)
 # Robo_Educativo(Lembrar de tirar essa parte)
 ![alt text](https://enginoeducation.com/wp-content/uploads/2019/01/43.png)
 
@@ -11,7 +12,9 @@
 -------------------------------------------------------------------------------------------------------------------
 
 # Robô Educativo
+![status Placa](https://img.shields.io/badge/Placa-N%C3%A3o%20Passou%20Nos%20Testes-critical)
 
+![status Controle](https://img.shields.io/badge/Controle-N%C3%A3o%20Passou%20Nos%20Testes-critical)
 ## Project Overview 
 Desenvolvimento de uma interface hibrida que permite a integração e utilização de sensores de três diferentes kits robóticos de aprendizagem: Kazi EV5, Engino, Fischer Technik. Composto por 3 shields, e um centro de controle com uma tela touch para interação homem-máquina.
 
@@ -45,6 +48,7 @@ Desenvolvimento de uma interface hibrida que permite a integração e utilizaç�
 
 ### Datas
 - Início - 020
+- Fim - 021
 ### Membros Executores 
 - Crotti (saiu na metade do projeto)- `ECA019`;
 - Erik - `ECA019`;
